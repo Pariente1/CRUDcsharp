@@ -62,6 +62,7 @@ C:\Proyectos\ProyectoKamil\ProyectoKamil\ProyectoKamil\ProyectoKamil\obj\Debug\n
 C:\Proyectos\ProyectoKamil\ProyectoKamil\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.AssemblyInfoInputs.cache
 C:\Proyectos\ProyectoKamil\ProyectoKamil\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.AssemblyInfo.cs
 C:\Proyectos\ProyectoKamil\ProyectoKamil\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.csproj.CoreCompileInputs.cache
+C:\Proyectos\ProyectoKamil\ProyectoKamil\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.sourcelink.json
 C:\Proyectos\ProyectoKamil\ProyectoKamil\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\Proyecto.847B91CA.Up2Date
 C:\Proyectos\ProyectoKamil\ProyectoKamil\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.dll
 C:\Proyectos\ProyectoKamil\ProyectoKamil\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\refint\ProyectoKamil.dll

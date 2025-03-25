@@ -39,7 +39,7 @@
             btnConectar.TabIndex = 0;
             btnConectar.Text = "Conectar";
             btnConectar.UseVisualStyleBackColor = true;
-            btnConectar.Click += button1_Click;
+            btnConectar.Click += btnConectar_click;
             // 
             // Form1
             // 

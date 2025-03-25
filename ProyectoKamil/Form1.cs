@@ -15,13 +15,9 @@ namespace ProyectoKamil
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnConectar_click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=(localdb)\\local;Initial Catalog=ProyectoKamil;Integrated Security=True;TrustServerCertificate=True";
 
