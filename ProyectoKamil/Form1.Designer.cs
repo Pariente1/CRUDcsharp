@@ -28,33 +28,188 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnConectar = new Button();
+            label1 = new Label();
+            groupBox1 = new GroupBox();
+            button2 = new Button();
+            addWorker = new Button();
+            groupBox2 = new GroupBox();
+            button4 = new Button();
+            button3 = new Button();
+            groupBox3 = new GroupBox();
+            button6 = new Button();
+            button5 = new Button();
+            conexionesToolStripMenuItem = new ToolStripMenuItem();
+            conectarABaseDeDatosToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1 = new MenuStrip();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // btnConectar
+            // label1
             // 
-            btnConectar.Location = new Point(106, 88);
-            btnConectar.Name = "btnConectar";
-            btnConectar.Size = new Size(150, 46);
-            btnConectar.TabIndex = 0;
-            btnConectar.Text = "Conectar";
-            btnConectar.UseVisualStyleBackColor = true;
-            btnConectar.Click += btnConectar_click;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label1.Location = new Point(451, 126);
+            label1.Name = "label1";
+            label1.Size = new Size(332, 32);
+            label1.TabIndex = 1;
+            label1.Text = "Menú de opciones de Kamil";
+            label1.Click += label1_Click;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(addWorker);
+            groupBox1.Location = new Point(54, 192);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(341, 453);
+            groupBox1.TabIndex = 2;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Empleados";
+            groupBox1.Enter += groupBox1_Enter;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(95, 113);
+            button2.Name = "button2";
+            button2.Size = new Size(150, 46);
+            button2.TabIndex = 1;
+            button2.Text = "Ver";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // addWorker
+            // 
+            addWorker.Location = new Point(95, 61);
+            addWorker.Name = "addWorker";
+            addWorker.Size = new Size(150, 46);
+            addWorker.TabIndex = 0;
+            addWorker.Text = "Agregar ";
+            addWorker.UseVisualStyleBackColor = true;
+            addWorker.Click += btnAddWorker;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(button4);
+            groupBox2.Controls.Add(button3);
+            groupBox2.Location = new Point(433, 192);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(359, 453);
+            groupBox2.TabIndex = 3;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Directores";
+            // 
+            // button4
+            // 
+            button4.Location = new Point(89, 113);
+            button4.Name = "button4";
+            button4.Size = new Size(150, 46);
+            button4.TabIndex = 1;
+            button4.Text = "Ver";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(89, 61);
+            button3.Name = "button3";
+            button3.Size = new Size(150, 46);
+            button3.TabIndex = 0;
+            button3.Text = "Agregar";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(button6);
+            groupBox3.Controls.Add(button5);
+            groupBox3.Location = new Point(820, 192);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(359, 453);
+            groupBox3.TabIndex = 4;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Centros";
+            // 
+            // button6
+            // 
+            button6.Location = new Point(92, 113);
+            button6.Name = "button6";
+            button6.Size = new Size(150, 46);
+            button6.TabIndex = 1;
+            button6.Text = "Ver";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(92, 61);
+            button5.Name = "button5";
+            button5.Size = new Size(150, 46);
+            button5.TabIndex = 0;
+            button5.Text = "Agregar";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // conexionesToolStripMenuItem
+            // 
+            conexionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { conectarABaseDeDatosToolStripMenuItem });
+            conexionesToolStripMenuItem.Name = "conexionesToolStripMenuItem";
+            conexionesToolStripMenuItem.Size = new Size(158, 36);
+            conexionesToolStripMenuItem.Text = "Conexiones";
+            // 
+            // conectarABaseDeDatosToolStripMenuItem
+            // 
+            conectarABaseDeDatosToolStripMenuItem.Name = "conectarABaseDeDatosToolStripMenuItem";
+            conectarABaseDeDatosToolStripMenuItem.Size = new Size(419, 44);
+            conectarABaseDeDatosToolStripMenuItem.Text = "Conectar a Base de Datos";
+            conectarABaseDeDatosToolStripMenuItem.Click += conectarABaseDeDatosToolStripMenuItem_Click;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(32, 32);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { conexionesToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1220, 40);
+            menuStrip1.TabIndex = 7;
+            menuStrip1.Text = "menuStrip1";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(374, 229);
-            Controls.Add(btnConectar);
+            ClientSize = new Size(1220, 691);
+            Controls.Add(groupBox3);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
+            Controls.Add(label1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
-            Text = "Coneccion a Base de datos";
+            Text = "Proyecto Kamil";
             Load += Form1_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Button btnConectar;
+        private Label label1;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private GroupBox groupBox3;
+        private Button button2;
+        private Button addWorker;
+        private Button button4;
+        private Button button3;
+        private Button button6;
+        private Button button5;
+        private ToolStripMenuItem conexionesToolStripMenuItem;
+        private ToolStripMenuItem conectarABaseDeDatosToolStripMenuItem;
+        private MenuStrip menuStrip1;
     }
 }

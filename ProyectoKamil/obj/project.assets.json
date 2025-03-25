@@ -1833,11 +1833,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\ProyectoKamil\\ProyectoKamil\\ProyectoKamil.csproj",
+      "projectUniqueName": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\ProyectoKamil.csproj",
       "projectName": "ProyectoKamil",
-      "projectPath": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\ProyectoKamil\\ProyectoKamil\\ProyectoKamil.csproj",
+      "projectPath": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\ProyectoKamil.csproj",
       "packagesPath": "C:\\Users\\neoda\\.nuget\\packages\\",
-      "outputPath": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\ProyectoKamil\\ProyectoKamil\\obj\\",
+      "outputPath": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
