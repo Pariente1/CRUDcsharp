@@ -38,14 +38,14 @@ namespace ProyectoKamil
         {
             string nombre = textBoxName.Text;
             string apellidoPaterno = textBoxFatherLastname.Text;
-            string apellidoMaterno = textBoxFatherLastname.Text;
+            string apellidoMaterno = textBoxMotherLastname.Text;
             DateTime fechaNac = dateTimePicker.Value;
             int centroTrabajo = (int)NumeroCentroTrabajo.Value;
             int idPuesto = (int)numericUpDown_jobPosition.Value;
-
+            bool isDirective = checkBoxIsDirective.Checked;
 
             string connectionString = "Data Source=(localdb)\\local;Initial Catalog=ProyectoKamil;Integrated Security=True;TrustServerCertificate=True";
-            string query = "INSERT INTO Empleado (Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Centro_Trabajo, ID_Puesto) VALUES (@Nombre, @apellidoPaterno, @apellidoMaterno, @fechaNac, @centroTrabajo, @idPuesto)";
+            string query = "INSERT INTO Empleado (Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Centro_Trabajo, ID_Puesto, Directivo) VALUES (@Nombre, @apellidoPaterno, @apellidoMaterno, @fechaNac, @centroTrabajo, @idPuesto, @isDirective)";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -60,6 +60,8 @@ namespace ProyectoKamil
                         cmd.Parameters.AddWithValue("@fechaNac", fechaNac);
                         cmd.Parameters.AddWithValue("@centroTrabajo", centroTrabajo);
                         cmd.Parameters.AddWithValue("@idPuesto", idPuesto);
+                        cmd.Parameters.AddWithValue("@isDirective", isDirective);
+
                         int result = cmd.ExecuteNonQuery();
 
                         if (result > 0)
@@ -91,7 +93,7 @@ namespace ProyectoKamil
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void checkBoxIsDirective_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -107,6 +109,11 @@ namespace ProyectoKamil
         }
 
         private void numericUpDown_jobPosition_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void isNotDirective_CheckedChanged(object sender, EventArgs e)
         {
 
         }

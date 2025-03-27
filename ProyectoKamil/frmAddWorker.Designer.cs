@@ -37,7 +37,7 @@
             label_WorkCenter = new Label();
             numericUpDown_jobPosition = new NumericUpDown();
             label1 = new Label();
-            isDirective = new RadioButton();
+            checkBoxIsDirective = new RadioButton();
             isNotDirective = new RadioButton();
             textBox_isDirective = new Label();
             label_FatherLastname = new Label();
@@ -139,15 +139,15 @@
             // 
             // isDirective
             // 
-            isDirective.AutoSize = true;
-            isDirective.Location = new Point(433, 431);
-            isDirective.Name = "isDirective";
-            isDirective.Size = new Size(64, 36);
-            isDirective.TabIndex = 12;
-            isDirective.TabStop = true;
-            isDirective.Text = "Si";
-            isDirective.UseVisualStyleBackColor = true;
-            isDirective.CheckedChanged += radioButton1_CheckedChanged;
+            checkBoxIsDirective.AutoSize = true;
+            checkBoxIsDirective.Location = new Point(433, 431);
+            checkBoxIsDirective.Name = "checkBoxIsDirective";
+            checkBoxIsDirective.Size = new Size(64, 36);
+            checkBoxIsDirective.TabIndex = 12;
+            checkBoxIsDirective.TabStop = true;
+            checkBoxIsDirective.Text = "Si";
+            checkBoxIsDirective.UseVisualStyleBackColor = true;
+            checkBoxIsDirective.CheckedChanged += checkBoxIsDirective_CheckedChanged;
             // 
             // isNotDirective
             // 
@@ -159,6 +159,7 @@
             isNotDirective.TabStop = true;
             isNotDirective.Text = "No";
             isNotDirective.UseVisualStyleBackColor = true;
+            isNotDirective.CheckedChanged += isNotDirective_CheckedChanged;
             // 
             // textBox_isDirective
             // 
@@ -220,7 +221,7 @@
             Controls.Add(label_FatherLastname);
             Controls.Add(textBox_isDirective);
             Controls.Add(isNotDirective);
-            Controls.Add(isDirective);
+            Controls.Add(checkBoxIsDirective);
             Controls.Add(label1);
             Controls.Add(numericUpDown_jobPosition);
             Controls.Add(label_WorkCenter);
@@ -249,7 +250,7 @@
         private Label label_WorkCenter;
         private NumericUpDown numericUpDown_jobPosition;
         private Label label1;
-        private RadioButton isDirective;
+        private RadioButton checkBoxIsDirective;
         private RadioButton isNotDirective;
         private Label textBox_isDirective;
         private Label label_FatherLastname;
