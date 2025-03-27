@@ -75,6 +75,7 @@
             textBoxMotherLastname.Size = new Size(200, 39);
             textBoxMotherLastname.TabIndex = 3;
             textBoxMotherLastname.TextAlign = HorizontalAlignment.Center;
+            textBoxMotherLastname.TextChanged += textBoxMotherLastname_TextChanged;
             // 
             // btnGuardar
             // 
@@ -169,7 +170,7 @@
             // label_FatherLastname
             // 
             label_FatherLastname.AutoSize = true;
-            label_FatherLastname.Location = new Point(141, 199);
+            label_FatherLastname.Location = new Point(141, 145);
             label_FatherLastname.Name = "label_FatherLastname";
             label_FatherLastname.RightToLeft = RightToLeft.Yes;
             label_FatherLastname.Size = new Size(190, 32);
@@ -179,7 +180,7 @@
             // label_MotherLastname
             // 
             label_MotherLastname.AutoSize = true;
-            label_MotherLastname.Location = new Point(141, 145);
+            label_MotherLastname.Location = new Point(141, 199);
             label_MotherLastname.Name = "label_MotherLastname";
             label_MotherLastname.RightToLeft = RightToLeft.Yes;
             label_MotherLastname.Size = new Size(200, 32);
