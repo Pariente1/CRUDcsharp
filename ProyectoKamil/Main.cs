@@ -2,13 +2,15 @@ using System;
 using Microsoft.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ProyectoKamil
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
+            Debug.WriteLine("Se creó Main");
             InitializeComponent();
             this.Size = new Size(1200, 800);
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -17,7 +19,7 @@ namespace ProyectoKamil
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Main_Load(object sender, EventArgs e)
         {
 
 
@@ -31,17 +33,19 @@ namespace ProyectoKamil
         private void btnAddWorker(object sender, EventArgs e)
         {
             frmAddWorker window = new frmAddWorker();
-            window.ShowDialog(); // Muestra como ventana modal
+            window.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void frmAddDirectors_Click(object sender, EventArgs e)
         {
-
+            frmAddDirectors window = new frmAddDirectors();
+            window.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void frmAddWorkCenter_Click(object sender, EventArgs e)
         {
-
+            frmAddWorkCenter window = new frmAddWorkCenter();
+            window.ShowDialog();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -49,9 +53,10 @@ namespace ProyectoKamil
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void frmViewEmployees_Click(object sender, EventArgs e)
         {
-
+            frmViewEmployees window = new frmViewEmployees();
+            window.ShowDialog();
         }
 
         private void conectarABaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +75,33 @@ namespace ProyectoKamil
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmViewDirectors_Click(object sender, EventArgs e)
+        {
+            frmViewDirectors window = new frmViewDirectors();
+            window.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void frmViewWorkCenter_Click(object sender, EventArgs e)
+        {
+            frmViewWorkCenter window = new frmViewWorkCenter();
+            window.ShowDialog();
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

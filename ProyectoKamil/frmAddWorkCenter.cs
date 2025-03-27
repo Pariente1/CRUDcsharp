@@ -10,19 +10,23 @@ using System.Windows.Forms;
 
 namespace ProyectoKamil
 {
-    public partial class frmAddWorker : Form
+    public partial class frmAddWorkCenter : Form
     {
-        public frmAddWorker()
+        public frmAddWorkCenter()
         {
             InitializeComponent();
-            this.Size = new Size(1200, 800);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
-        private void frmAddWorker_Load(object sender, EventArgs e)
+        private void frmAddWorkCenter_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

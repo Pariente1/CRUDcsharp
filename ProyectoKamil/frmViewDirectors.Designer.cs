@@ -1,6 +1,6 @@
 ﻿namespace ProyectoKamil
 {
-    partial class frmAddWorker
+    partial class frmViewDirectors
     {
         /// <summary>
         /// Required designer variable.
@@ -34,21 +34,22 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(319, 307);
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(321, 271);
             label1.Name = "label1";
-            label1.Size = new Size(435, 32);
+            label1.Size = new Size(470, 45);
             label1.TabIndex = 0;
-            label1.Text = "Ventana para agregar empleado testing";
+            label1.Text = "Vista para ver directores testing";
             // 
-            // frmAddWorker
+            // frmViewDirectors
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1174, 729);
             Controls.Add(label1);
-            Name = "frmAddWorker";
-            Text = "Agregar Empleado - Proyecto Kamil";
-            Load += frmAddWorker_Load;
+            Name = "frmViewDirectors";
+            Text = "Ver directores";
+            Load += frmViewDirectors_Load;
             ResumeLayout(false);
             PerformLayout();
         }

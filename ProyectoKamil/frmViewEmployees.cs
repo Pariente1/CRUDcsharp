@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoKamil
 {
-    public partial class frmAddWorker : Form
+    public partial class frmViewEmployees : Form
     {
-        public frmAddWorker()
+        public frmViewEmployees()
         {
             InitializeComponent();
             this.Size = new Size(1200, 800);
@@ -22,7 +22,7 @@ namespace ProyectoKamil
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
-        private void frmAddWorker_Load(object sender, EventArgs e)
+        private void frmViewEmployees_Load(object sender, EventArgs e)
         {
 
         }
