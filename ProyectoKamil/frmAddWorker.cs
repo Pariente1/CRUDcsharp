@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoKamil
 {
+
     public partial class frmAddWorker : Form
     {
         public frmAddWorker()
@@ -27,13 +28,14 @@ namespace ProyectoKamil
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBoxName_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonSaveAddWorker_Click(object sender, EventArgs e)
         {
+
 
         }
 
@@ -57,4 +59,6 @@ namespace ProyectoKamil
 
         }
     }
+
+
 }

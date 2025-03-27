@@ -56,7 +56,7 @@
             textBoxName.TabIndex = 1;
             textBoxName.TextAlign = HorizontalAlignment.Center;
             textBoxName.UseWaitCursor = true;
-            textBoxName.TextChanged += textBox1_TextChanged;
+            textBoxName.TextChanged += textBoxName_TextChanged;
             // 
             // textBoxFatherLastname
             // 
@@ -84,7 +84,7 @@
             btnGuardar.TabIndex = 5;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
-            btnGuardar.Click += button1_Click;
+            btnGuardar.Click += buttonSaveAddWorker_Click;
             // 
             // dateTimePicker
             // 
