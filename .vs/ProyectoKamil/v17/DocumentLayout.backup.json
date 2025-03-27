@@ -15,12 +15,12 @@
       "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\frmaddworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Main.cs [Design]",
               "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\Main.cs",
               "RelativeDocumentMoniker": "ProyectoKamil\\Main.cs",
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Main.cs",
               "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\Main.cs",
               "RelativeDocumentMoniker": "ProyectoKamil\\Main.cs",
@@ -67,8 +67,8 @@
               "Title": "frmAddWorker.cs [Design]",
               "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddWorker.cs",
               "RelativeDocumentMoniker": "ProyectoKamil\\frmAddWorker.cs",
-              "ToolTip": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddWorker.cs [Design]*",
-              "RelativeToolTip": "ProyectoKamil\\frmAddWorker.cs [Design]*",
+              "ToolTip": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddWorker.cs [Design]",
+              "RelativeToolTip": "ProyectoKamil\\frmAddWorker.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T19:25:34.017Z",
               "EditorCaption": " [Design]"
@@ -79,9 +79,9 @@
               "Title": "frmAddWorker.cs",
               "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddWorker.cs",
               "RelativeDocumentMoniker": "ProyectoKamil\\frmAddWorker.cs",
-              "ToolTip": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddWorker.cs*",
-              "RelativeToolTip": "ProyectoKamil\\frmAddWorker.cs*",
-              "ViewState": "AgIAACcAAAAAAAAAAAAhwDYAAAA7AAAAAAAAAA==",
+              "ToolTip": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddWorker.cs",
+              "RelativeToolTip": "ProyectoKamil\\frmAddWorker.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAIA+wDsAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T19:23:12.854Z",
               "EditorCaption": ""
@@ -94,7 +94,7 @@
               "RelativeDocumentMoniker": "ProyectoKamil\\frmAddWorker.Designer.cs",
               "ToolTip": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddWorker.Designer.cs",
               "RelativeToolTip": "ProyectoKamil\\frmAddWorker.Designer.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAwD8AAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAAwGoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T19:22:03.023Z",
               "EditorCaption": ""

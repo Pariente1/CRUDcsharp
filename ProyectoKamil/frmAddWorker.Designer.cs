@@ -105,6 +105,7 @@
             NumeroCentroTrabajo.Size = new Size(77, 39);
             NumeroCentroTrabajo.TabIndex = 8;
             NumeroCentroTrabajo.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            NumeroCentroTrabajo.ValueChanged += NumeroCentroTrabajo_ValueChanged;
             // 
             // label_WorkCenter
             // 
@@ -124,6 +125,7 @@
             numericUpDown_jobPosition.Size = new Size(77, 39);
             numericUpDown_jobPosition.TabIndex = 10;
             numericUpDown_jobPosition.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            numericUpDown_jobPosition.ValueChanged += numericUpDown_jobPosition_ValueChanged;
             // 
             // label1
             // 
