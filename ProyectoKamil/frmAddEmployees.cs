@@ -57,9 +57,7 @@ namespace ProyectoKamil
                 MessageBox.Show("Solo puede ingregar personas mayores de edad.");
                 return;
             }
-
-            MessageBox.Show($"RFC Generado: {rfcCalculado}");
-
+            
             string connectionString = "Data Source=(localdb)\\local;Initial Catalog=ProyectoKamil;Integrated Security=True;TrustServerCertificate=True";
             string query = "INSERT INTO Empleado (Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, RFC, Centro_Trabajo, ID_Puesto, Directivo) VALUES (@Nombre, @apellidoPaterno, @apellidoMaterno, @fechaNac, @rfcCalculado, @centroTrabajo, @idPuesto, @isDirective)";
 
