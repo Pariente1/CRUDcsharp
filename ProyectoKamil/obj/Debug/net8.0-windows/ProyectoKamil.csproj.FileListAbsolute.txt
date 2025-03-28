@@ -58,7 +58,6 @@ C:\Proyectos\ProyectoKamil\ProyectoKamil\bin\Debug\net8.0-windows\runtimes\win\l
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.csproj.AssemblyReference.cache
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmAddDirectors.resources
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmAddWorkCenter.resources
-C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmAddWorker.resources
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmViewDirectors.resources
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmViewEmployees.resources
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmViewWorkCenter.resources
@@ -75,3 +74,4 @@ C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\refint\Proyect
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.pdb
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.genruntimeconfig.cache
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ref\ProyectoKamil.dll
+C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmAddEmployees.resources

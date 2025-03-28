@@ -1,6 +1,6 @@
 ﻿namespace ProyectoKamil
 {
-    partial class frmAddWorker
+    partial class frmAddEmployees
     {
         /// <summary>
         /// Required designer variable.

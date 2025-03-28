@@ -12,9 +12,9 @@ using System.Windows.Forms;
 namespace ProyectoKamil
 {
 
-    public partial class frmAddWorker : Form
+    public partial class frmAddEmployees : Form
     {
-        public frmAddWorker()
+        public frmAddEmployees()
         {
             InitializeComponent();
             this.Size = new Size(1200, 800);

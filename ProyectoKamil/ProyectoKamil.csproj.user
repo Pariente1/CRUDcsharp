@@ -19,7 +19,7 @@
     <Compile Update="frmViewEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmAddWorker.cs">
+    <Compile Update="frmAddEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

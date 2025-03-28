@@ -32,7 +32,7 @@ namespace ProyectoKamil
 
         private void btnAddWorker(object sender, EventArgs e)
         {
-            frmAddWorker window = new frmAddWorker();
+            frmAddEmployees window = new frmAddEmployees();
             window.ShowDialog();
         }
 
