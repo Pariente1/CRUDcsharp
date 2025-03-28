@@ -93,7 +93,7 @@
             dateTimePicker.Name = "dateTimePicker";
             dateTimePicker.Size = new Size(482, 39);
             dateTimePicker.TabIndex = 6;
-            dateTimePicker.Value = new DateTime(2025, 3, 27, 11, 39, 49, 0);
+            dateTimePicker.Value = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dateTimePicker.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // NumeroCentroTrabajo
@@ -137,7 +137,7 @@
             label1.Text = "Puesto de Trabajo";
             label1.Click += label1_Click;
             // 
-            // isDirective
+            // checkBoxIsDirective
             // 
             checkBoxIsDirective.AutoSize = true;
             checkBoxIsDirective.Location = new Point(433, 431);
@@ -210,7 +210,7 @@
             label_Birthdate.TabIndex = 18;
             label_Birthdate.Text = "Fecha de Nacimiento";
             // 
-            // frmAddWorker
+            // frmAddEmployees
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -231,7 +231,7 @@
             Controls.Add(textBoxMotherLastname);
             Controls.Add(textBoxFatherLastname);
             Controls.Add(textBoxName);
-            Name = "frmAddWorker";
+            Name = "frmAddEmployees";
             Text = "Agregar Empleado - Proyecto Kamil";
             Load += frmAddWorker_Load;
             ((System.ComponentModel.ISupportInitialize)NumeroCentroTrabajo).EndInit();

@@ -1,13 +1,14 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ProyectoKamil.RFCGenerator;
 
 namespace ProyectoKamil
 {
@@ -43,9 +44,12 @@ namespace ProyectoKamil
             int centroTrabajo = (int)NumeroCentroTrabajo.Value;
             int idPuesto = (int)numericUpDown_jobPosition.Value;
             bool isDirective = checkBoxIsDirective.Checked;
+            string rfcCalculado = RFCGenerator.GenerarRFC(nombre, apellidoPaterno, apellidoMaterno, fechaNac);
+
+            MessageBox.Show($"RFC Generado: {rfcCalculado}");
 
             string connectionString = "Data Source=(localdb)\\local;Initial Catalog=ProyectoKamil;Integrated Security=True;TrustServerCertificate=True";
-            string query = "INSERT INTO Empleado (Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Centro_Trabajo, ID_Puesto, Directivo) VALUES (@Nombre, @apellidoPaterno, @apellidoMaterno, @fechaNac, @centroTrabajo, @idPuesto, @isDirective)";
+            string query = "INSERT INTO Empleado (Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, RFC, Centro_Trabajo, ID_Puesto, Directivo) VALUES (@Nombre, @apellidoPaterno, @apellidoMaterno, @fechaNac, @rfcCalculado, @centroTrabajo, @idPuesto, @isDirective)";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -58,6 +62,7 @@ namespace ProyectoKamil
                         cmd.Parameters.AddWithValue("@apellidoPaterno", apellidoPaterno);
                         cmd.Parameters.AddWithValue("@apellidoMaterno", apellidoMaterno);
                         cmd.Parameters.AddWithValue("@fechaNac", fechaNac);
+                        cmd.Parameters.AddWithValue("@rfcCalculado", rfcCalculado);
                         cmd.Parameters.AddWithValue("@centroTrabajo", centroTrabajo);
                         cmd.Parameters.AddWithValue("@idPuesto", idPuesto);
                         cmd.Parameters.AddWithValue("@isDirective", isDirective);

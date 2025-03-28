@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ProyectoKamil.RFCGenerator;
+
 
 namespace ProyectoKamil
 {
@@ -80,11 +82,38 @@ namespace ProyectoKamil
 
         private void button_Buscar_Click(object sender, EventArgs e)
         {
-            string nombre = textBoxName.Text;
-
             string connectionString = "Data Source=(localdb)\\local;Initial Catalog=ProyectoKamil;Integrated Security=True;TrustServerCertificate=True";
-            string query = "SELECT * FROM Empleado WHERE Nombre = @Nombre";
 
+            string query = "SELECT * FROM Empleado WHERE 1=1"; // 1=1 permite agregar filtros dinámicos
+            List<SqlParameter> parametros = new List<SqlParameter>();
+
+            // Filtros
+
+            if (!string.IsNullOrWhiteSpace(textBoxName.Text))
+            {
+                query += " AND Nombre = @Nombre";
+                parametros.Add(new SqlParameter("@Nombre", textBoxName.Text));
+            }
+
+            if (!string.IsNullOrWhiteSpace(textBoxSelectRFC.Text))
+            {
+                query += " AND RFC = @RFC";
+                parametros.Add(new SqlParameter("@RFC", textBoxSelectRFC.Text));
+            }
+
+            if (dateTimePickerBirthDay.Value.Date != new DateTime(1900, 1, 1))
+            {
+                query += " AND Fecha_Nacimiento = @Fecha";
+                parametros.Add(new SqlParameter("@Fecha", dateTimePickerBirthDay.Value.Date));
+            }
+
+            if ((int)selectWorkCenter.Value != 0)
+            {
+                query += " AND Centro_Trabajo = @Centro";
+                parametros.Add(new SqlParameter("@Centro", (int)selectWorkCenter.Value));
+            }
+
+            // Ejecución
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
@@ -92,7 +121,8 @@ namespace ProyectoKamil
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@Nombre", nombre);
+                        foreach (var p in parametros)
+                            cmd.Parameters.Add(p);
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
@@ -100,17 +130,15 @@ namespace ProyectoKamil
                             {
                                 while (reader.Read())
                                 {
-                                    // Por ejemplo, mostrar algunos datos en un MessageBox
                                     string empleadoInfo = $"Nombre: {reader["Nombre"]}\n" +
-                                                          $"Apellido Paterno: {reader["Apellido_Paterno"]}\n" +
+                                                          $"RFC: {reader["RFC"]}\n" +
                                                           $"Centro Trabajo: {reader["Centro_Trabajo"]}";
-
                                     MessageBox.Show(empleadoInfo, "Empleado encontrado");
                                 }
                             }
                             else
                             {
-                                MessageBox.Show("No se encontró el empleado.");
+                                MessageBox.Show("No se encontró ningún empleado con los criterios proporcionados.");
                             }
                         }
                     }
@@ -120,6 +148,7 @@ namespace ProyectoKamil
                     MessageBox.Show("Error al consultar: " + ex.Message);
                 }
             }
+
 
         }
     }
