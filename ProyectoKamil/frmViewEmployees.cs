@@ -130,7 +130,9 @@ namespace ProyectoKamil
                             {
                                 while (reader.Read())
                                 {
-                                    string empleadoInfo = $"Nombre: {reader["Nombre"]}\n" +
+                                    string empleadoInfo = $"Nombre: {reader["Nombre"]} " +
+                                                          $"{reader["Apellido_Paterno"]} " +
+                                                          $"{reader["Apellido_Materno"]}\n" +
                                                           $"RFC: {reader["RFC"]}\n" +
                                                           $"Centro Trabajo: {reader["Centro_Trabajo"]}";
                                     MessageBox.Show(empleadoInfo, "Empleado encontrado");
