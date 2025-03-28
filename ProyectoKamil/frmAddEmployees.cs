@@ -46,6 +46,18 @@ namespace ProyectoKamil
             bool isDirective = checkBoxIsDirective.Checked;
             string rfcCalculado = RFCGenerator.GenerarRFC(nombre, apellidoPaterno, apellidoMaterno, fechaNac);
 
+            if (fechaNac == new DateTime(1900,1,1) )
+            {
+                MessageBox.Show("Por favor selecciona una fecha; no puede ser 01/01/1900.");
+                return;
+            }
+
+            if (fechaNac > new DateTime(2002, 1, 1))
+            {
+                MessageBox.Show("Solo puede ingregar personas mayores de edad.");
+                return;
+            }
+
             MessageBox.Show($"RFC Generado: {rfcCalculado}");
 
             string connectionString = "Data Source=(localdb)\\local;Initial Catalog=ProyectoKamil;Integrated Security=True;TrustServerCertificate=True";
