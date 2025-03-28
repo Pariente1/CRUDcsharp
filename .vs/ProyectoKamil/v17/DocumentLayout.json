@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Proyectos\\ProyectoKamil\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\frmviewemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\frmviewemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\frmaddemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\frmaddemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\frmaddemployees.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\frmaddemployees.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\frmaddemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\frmaddemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmViewEmployees.cs",
-              "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmViewEmployees.cs",
-              "RelativeDocumentMoniker": "ProyectoKamil\\frmViewEmployees.cs",
-              "ToolTip": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmViewEmployees.cs*",
-              "RelativeToolTip": "ProyectoKamil\\frmViewEmployees.cs*",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAmwIcAAABVAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "frmAddEmployees.cs [Design]",
+              "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddEmployees.cs",
+              "RelativeDocumentMoniker": "ProyectoKamil\\frmAddEmployees.cs",
+              "ToolTip": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddEmployees.cs [Design]*",
+              "RelativeToolTip": "ProyectoKamil\\frmAddEmployees.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T18:49:19.243Z",
+              "WhenOpened": "2025-03-28T19:28:43.624Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmAddEmployees.Designer.cs",
+              "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddEmployees.Designer.cs",
+              "RelativeDocumentMoniker": "ProyectoKamil\\frmAddEmployees.Designer.cs",
+              "ToolTip": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddEmployees.Designer.cs",
+              "RelativeToolTip": "ProyectoKamil\\frmAddEmployees.Designer.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAYwJsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T19:21:32.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmAddEmployees.cs",
+              "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddEmployees.cs",
+              "RelativeDocumentMoniker": "ProyectoKamil\\frmAddEmployees.cs",
+              "ToolTip": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddEmployees.cs*",
+              "RelativeToolTip": "ProyectoKamil\\frmAddEmployees.cs*",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAkwE0AAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T19:16:43.866Z",
               "EditorCaption": ""
             }
           ]

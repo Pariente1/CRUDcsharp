@@ -41,12 +41,12 @@ namespace ProyectoKamil
             string apellidoPaterno = textBoxFatherLastname.Text;
             string apellidoMaterno = textBoxMotherLastname.Text;
             DateTime fechaNac = dateTimePicker.Value;
-            int centroTrabajo = (int)NumeroCentroTrabajo.Value;
-            int idPuesto = (int)numericUpDown_jobPosition.Value;
-            bool isDirective = checkBoxIsDirective.Checked;
+            string centroTrabajo = comboBoxWorkCenter.SelectedItem?.ToString() ?? "Favor de seleccionar un centro de trabajo";
+            string nombrePuesto = comboBoxJobPosition.SelectedItem?.ToString() ?? "Favor de seleccionar un puesto de trabajo";
+            int isDirective = 0;
             string rfcCalculado = RFCGenerator.GenerarRFC(nombre, apellidoPaterno, apellidoMaterno, fechaNac);
 
-            if (fechaNac == new DateTime(1900,1,1) )
+            if (fechaNac == new DateTime(1900, 1, 1))
             {
                 MessageBox.Show("Por favor selecciona una fecha; no puede ser 01/01/1900.");
                 return;
@@ -57,9 +57,9 @@ namespace ProyectoKamil
                 MessageBox.Show("Solo puede ingregar personas mayores de edad.");
                 return;
             }
-            
+
             string connectionString = "Data Source=(localdb)\\local;Initial Catalog=ProyectoKamil;Integrated Security=True;TrustServerCertificate=True";
-            string query = "INSERT INTO Empleado (Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, RFC, Centro_Trabajo, ID_Puesto, Directivo) VALUES (@Nombre, @apellidoPaterno, @apellidoMaterno, @fechaNac, @rfcCalculado, @centroTrabajo, @idPuesto, @isDirective)";
+            string query = "INSERT INTO Empleado (Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, RFC, Nombre_Centro, Nombre_Puesto, Directivo) VALUES (@Nombre, @apellidoPaterno, @apellidoMaterno, @fechaNac, @rfcCalculado, @centroTrabajo, @nombrePuesto, @isDirective)";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -74,7 +74,7 @@ namespace ProyectoKamil
                         cmd.Parameters.AddWithValue("@fechaNac", fechaNac);
                         cmd.Parameters.AddWithValue("@rfcCalculado", rfcCalculado);
                         cmd.Parameters.AddWithValue("@centroTrabajo", centroTrabajo);
-                        cmd.Parameters.AddWithValue("@idPuesto", idPuesto);
+                        cmd.Parameters.AddWithValue("@nombrePuesto", nombrePuesto);
                         cmd.Parameters.AddWithValue("@isDirective", isDirective);
 
                         int result = cmd.ExecuteNonQuery();
@@ -129,6 +129,16 @@ namespace ProyectoKamil
         }
 
         private void isNotDirective_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxJobPosition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxWorkCenter_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

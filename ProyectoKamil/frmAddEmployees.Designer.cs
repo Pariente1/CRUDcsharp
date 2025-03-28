@@ -33,19 +33,14 @@
             textBoxMotherLastname = new TextBox();
             btnGuardar = new Button();
             dateTimePicker = new DateTimePicker();
-            NumeroCentroTrabajo = new NumericUpDown();
             label_WorkCenter = new Label();
-            numericUpDown_jobPosition = new NumericUpDown();
             label1 = new Label();
-            checkBoxIsDirective = new RadioButton();
-            isNotDirective = new RadioButton();
-            textBox_isDirective = new Label();
             label_FatherLastname = new Label();
             label_MotherLastname = new Label();
             label_Name = new Label();
             label_Birthdate = new Label();
-            ((System.ComponentModel.ISupportInitialize)NumeroCentroTrabajo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown_jobPosition).BeginInit();
+            comboBoxWorkCenter = new ComboBox();
+            comboBoxJobPosition = new ComboBox();
             SuspendLayout();
             // 
             // textBoxName
@@ -96,17 +91,6 @@
             dateTimePicker.Value = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dateTimePicker.ValueChanged += dateTimePicker1_ValueChanged;
             // 
-            // NumeroCentroTrabajo
-            // 
-            NumeroCentroTrabajo.Location = new Point(433, 314);
-            NumeroCentroTrabajo.Maximum = new decimal(new int[] { 5, 0, 0, 0 });
-            NumeroCentroTrabajo.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            NumeroCentroTrabajo.Name = "NumeroCentroTrabajo";
-            NumeroCentroTrabajo.Size = new Size(77, 39);
-            NumeroCentroTrabajo.TabIndex = 8;
-            NumeroCentroTrabajo.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            NumeroCentroTrabajo.ValueChanged += NumeroCentroTrabajo_ValueChanged;
-            // 
             // label_WorkCenter
             // 
             label_WorkCenter.AutoSize = true;
@@ -115,17 +99,6 @@
             label_WorkCenter.Size = new Size(204, 32);
             label_WorkCenter.TabIndex = 9;
             label_WorkCenter.Text = "Centro de Trabajo";
-            // 
-            // numericUpDown_jobPosition
-            // 
-            numericUpDown_jobPosition.Location = new Point(433, 374);
-            numericUpDown_jobPosition.Maximum = new decimal(new int[] { 3, 0, 0, 0 });
-            numericUpDown_jobPosition.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown_jobPosition.Name = "numericUpDown_jobPosition";
-            numericUpDown_jobPosition.Size = new Size(77, 39);
-            numericUpDown_jobPosition.TabIndex = 10;
-            numericUpDown_jobPosition.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown_jobPosition.ValueChanged += numericUpDown_jobPosition_ValueChanged;
             // 
             // label1
             // 
@@ -136,39 +109,6 @@
             label1.TabIndex = 11;
             label1.Text = "Puesto de Trabajo";
             label1.Click += label1_Click;
-            // 
-            // checkBoxIsDirective
-            // 
-            checkBoxIsDirective.AutoSize = true;
-            checkBoxIsDirective.Location = new Point(433, 431);
-            checkBoxIsDirective.Name = "checkBoxIsDirective";
-            checkBoxIsDirective.Size = new Size(64, 36);
-            checkBoxIsDirective.TabIndex = 12;
-            checkBoxIsDirective.TabStop = true;
-            checkBoxIsDirective.Text = "Si";
-            checkBoxIsDirective.UseVisualStyleBackColor = true;
-            checkBoxIsDirective.CheckedChanged += checkBoxIsDirective_CheckedChanged;
-            // 
-            // isNotDirective
-            // 
-            isNotDirective.AutoSize = true;
-            isNotDirective.Location = new Point(433, 473);
-            isNotDirective.Name = "isNotDirective";
-            isNotDirective.Size = new Size(77, 36);
-            isNotDirective.TabIndex = 13;
-            isNotDirective.TabStop = true;
-            isNotDirective.Text = "No";
-            isNotDirective.UseVisualStyleBackColor = true;
-            isNotDirective.CheckedChanged += isNotDirective_CheckedChanged;
-            // 
-            // textBox_isDirective
-            // 
-            textBox_isDirective.AutoSize = true;
-            textBox_isDirective.Location = new Point(141, 435);
-            textBox_isDirective.Name = "textBox_isDirective";
-            textBox_isDirective.Size = new Size(149, 32);
-            textBox_isDirective.TabIndex = 14;
-            textBox_isDirective.Text = "Es Directivo?";
             // 
             // label_FatherLastname
             // 
@@ -210,22 +150,39 @@
             label_Birthdate.TabIndex = 18;
             label_Birthdate.Text = "Fecha de Nacimiento";
             // 
+            // comboBox1
+            // 
+            comboBoxWorkCenter.FormattingEnabled = true;
+            comboBoxWorkCenter.Items.AddRange(new object[] { "Centro Culiacán", "Centro Guasave", "Centro Navolato" });
+            comboBoxWorkCenter.Location = new Point(433, 313);
+            comboBoxWorkCenter.Name = "comboBoxWorkCenter";
+            comboBoxWorkCenter.Size = new Size(242, 40);
+            comboBoxWorkCenter.TabIndex = 19;
+            comboBoxWorkCenter.SelectedIndexChanged += comboBoxWorkCenter_SelectedIndexChanged;
+            // 
+            // comboBoxJobPosition
+            // 
+            comboBoxJobPosition.FormattingEnabled = true;
+            comboBoxJobPosition.Items.AddRange(new object[] { "Vendedor ", "Cajero" });
+            comboBoxJobPosition.Location = new Point(433, 373);
+            comboBoxJobPosition.Name = "comboBoxJobPosition";
+            comboBoxJobPosition.Size = new Size(242, 40);
+            comboBoxJobPosition.TabIndex = 20;
+            comboBoxJobPosition.SelectedIndexChanged += comboBoxJobPosition_SelectedIndexChanged;
+            // 
             // frmAddEmployees
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1174, 729);
+            Controls.Add(comboBoxJobPosition);
+            Controls.Add(comboBoxWorkCenter);
             Controls.Add(label_Birthdate);
             Controls.Add(label_Name);
             Controls.Add(label_MotherLastname);
             Controls.Add(label_FatherLastname);
-            Controls.Add(textBox_isDirective);
-            Controls.Add(isNotDirective);
-            Controls.Add(checkBoxIsDirective);
             Controls.Add(label1);
-            Controls.Add(numericUpDown_jobPosition);
             Controls.Add(label_WorkCenter);
-            Controls.Add(NumeroCentroTrabajo);
             Controls.Add(dateTimePicker);
             Controls.Add(btnGuardar);
             Controls.Add(textBoxMotherLastname);
@@ -234,8 +191,6 @@
             Name = "frmAddEmployees";
             Text = "Agregar Empleado - Proyecto Kamil";
             Load += frmAddWorker_Load;
-            ((System.ComponentModel.ISupportInitialize)NumeroCentroTrabajo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown_jobPosition).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -246,16 +201,13 @@
         private TextBox textBoxMotherLastname;
         private Button btnGuardar;
         private DateTimePicker dateTimePicker;
-        private NumericUpDown NumeroCentroTrabajo;
         private Label label_WorkCenter;
-        private NumericUpDown numericUpDown_jobPosition;
         private Label label1;
-        private RadioButton checkBoxIsDirective;
-        private RadioButton isNotDirective;
-        private Label textBox_isDirective;
         private Label label_FatherLastname;
         private Label label_MotherLastname;
         private Label label_Name;
         private Label label_Birthdate;
+        private ComboBox comboBoxWorkCenter;
+        private ComboBox comboBoxJobPosition;
     }
 }
