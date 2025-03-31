@@ -56,6 +56,7 @@ namespace ProyectoKamil
             int idPuesto = 3; // Directivo
             int isDirective = 1;  // Puedes ajustar este valor si lo necesitas
             string rfcCalculado = RFCGenerator.GenerarRFC(nombre, apellidoPaterno, apellidoMaterno, fechaNac);
+            bool FuelAllowance = radioButton1.Checked;
 
             // Validación de la fecha
             if (fechaNac == new DateTime(1900, 1, 1))
@@ -84,7 +85,7 @@ namespace ProyectoKamil
                 INSERT INTO Directivo 
                     (ID_Empleado, Centro_Supervisado, Prestacion_Combustible) 
                 VALUES 
-                    (@ID_Empleado, @Centro_Supervisado, @Prestacion_Combustible);";
+                    (@ID_Empleado, @Centro_Supervisado, @FuelAllowance);";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -116,7 +117,7 @@ namespace ProyectoKamil
                             cmd2.Parameters.AddWithValue("@ID_Empleado", newEmpleadoId);
                             // Aquí se usa el mismo centro para Centro_Supervisado; ajústalo si es necesario
                             cmd2.Parameters.AddWithValue("@Centro_Supervisado", idCentro);
-                            cmd2.Parameters.AddWithValue("@Prestacion_Combustible", 1);
+                            cmd2.Parameters.AddWithValue("@FuelAllowance", FuelAllowance ? 1: 0);
                             cmd2.ExecuteNonQuery();
                         }
 
