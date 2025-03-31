@@ -34,74 +34,100 @@ namespace ProyectoKamil
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // 1) Validar y obtener valor del comboBoxWorkCenter
+            // Validar y obtener el centro de trabajo
             if (comboBoxWorkCenter.SelectedItem == null)
             {
                 MessageBox.Show("Selecciona un centro de trabajo.");
                 return;
             }
             string selectedWorkCenter = comboBoxWorkCenter.SelectedItem.ToString().Trim();
-
             if (!Catalogos.WorkCenters.ContainsKey(selectedWorkCenter))
             {
                 MessageBox.Show("Selecciona un centro de trabajo válido.");
                 return;
             }
 
-
-
+            // Datos del empleado/directivo
             string nombre = textBoxName.Text;
             string apellidoPaterno = textBoxFatherLastname.Text;
             string apellidoMaterno = textBoxMotherLastname.Text;
             DateTime fechaNac = dateTimePicker.Value;
             int idCentro = Catalogos.WorkCenters[selectedWorkCenter];
-            int idPuesto = 3;
-            int isDirective = 0;
+            int idPuesto = 3; // Directivo
+            int isDirective = 1;  // Puedes ajustar este valor si lo necesitas
             string rfcCalculado = RFCGenerator.GenerarRFC(nombre, apellidoPaterno, apellidoMaterno, fechaNac);
 
-            // Validación de la fecha para que no sea Default ni menor de edad
+            // Validación de la fecha
             if (fechaNac == new DateTime(1900, 1, 1))
             {
                 MessageBox.Show("Por favor selecciona una fecha; no puede ser 01/01/1900.");
                 return;
             }
-
             if (fechaNac > new DateTime(2002, 1, 1))
             {
-                MessageBox.Show("Solo puede ingregar personas mayores de edad.");
+                MessageBox.Show("Solo se pueden ingresar personas mayores de edad.");
                 return;
             }
 
             string connectionString = "Data Source=(localdb)\\local;Initial Catalog=ProyectoKamil;Integrated Security=True;TrustServerCertificate=True";
-            string query = "INSERT INTO Empleado (Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, RFC, Centro_Trabajo, ID_Puesto, Directivo) VALUES (@Nombre, @apellidoPaterno, @apellidoMaterno, @fechaNac, @rfcCalculado, @idCentro, @idPuesto, @isDirective)";
+
+            // Query para insertar en Empleado y recuperar el nuevo ID
+            string queryEmpleado = @"
+                INSERT INTO Empleado 
+                    (Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, RFC, Centro_Trabajo, ID_Puesto, Directivo) 
+                VALUES 
+                    (@Nombre, @apellidoPaterno, @apellidoMaterno, @fechaNac, @rfcCalculado, @idCentro, @idPuesto, @isDirective);
+                SELECT SCOPE_IDENTITY();";
+
+            // Query para insertar en Directivo
+            string queryDirectivo = @"
+                INSERT INTO Directivo 
+                    (ID_Empleado, Centro_Supervisado, Prestacion_Combustible) 
+                VALUES 
+                    (@ID_Empleado, @Centro_Supervisado, @Prestacion_Combustible);";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                try
+                conn.Open();
+                using (SqlTransaction tran = conn.BeginTransaction())
                 {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    try
                     {
-                        cmd.Parameters.AddWithValue("@Nombre", nombre);
-                        cmd.Parameters.AddWithValue("@apellidoPaterno", apellidoPaterno);
-                        cmd.Parameters.AddWithValue("@apellidoMaterno", apellidoMaterno);
-                        cmd.Parameters.AddWithValue("@fechaNac", fechaNac);
-                        cmd.Parameters.AddWithValue("@rfcCalculado", rfcCalculado);
-                        cmd.Parameters.AddWithValue("@idCentro", idCentro);
-                        cmd.Parameters.AddWithValue("@idPuesto", idPuesto);
-                        cmd.Parameters.AddWithValue("@isDirective", isDirective);
+                        int newEmpleadoId = 0;
+                        // Insertar en Empleado
+                        using (SqlCommand cmd = new SqlCommand(queryEmpleado, conn, tran))
+                        {
+                            cmd.Parameters.AddWithValue("@Nombre", nombre);
+                            cmd.Parameters.AddWithValue("@apellidoPaterno", apellidoPaterno);
+                            cmd.Parameters.AddWithValue("@apellidoMaterno", apellidoMaterno);
+                            cmd.Parameters.AddWithValue("@fechaNac", fechaNac);
+                            cmd.Parameters.AddWithValue("@rfcCalculado", rfcCalculado);
+                            cmd.Parameters.AddWithValue("@idCentro", idCentro);
+                            cmd.Parameters.AddWithValue("@idPuesto", idPuesto);
+                            cmd.Parameters.AddWithValue("@isDirective", isDirective);
 
-                        int result = cmd.ExecuteNonQuery();
+                            object result = cmd.ExecuteScalar();
+                            newEmpleadoId = Convert.ToInt32(result);
+                        }
 
-                        if (result > 0)
-                            MessageBox.Show("Empleado agregado correctamente.");
-                        else
-                            MessageBox.Show("No se pudo agregar el empleado.");
+                        // Insertar en Directivo (como es esta interfaz, siempre se insertará)
+                        using (SqlCommand cmd2 = new SqlCommand(queryDirectivo, conn, tran))
+                        {
+                            cmd2.Parameters.AddWithValue("@ID_Empleado", newEmpleadoId);
+                            // Aquí se usa el mismo centro para Centro_Supervisado; ajústalo si es necesario
+                            cmd2.Parameters.AddWithValue("@Centro_Supervisado", idCentro);
+                            cmd2.Parameters.AddWithValue("@Prestacion_Combustible", 1);
+                            cmd2.ExecuteNonQuery();
+                        }
+
+                        tran.Commit();
+                        MessageBox.Show("Directivo agregado correctamente.");
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al insertar: " + ex.Message);
+                    catch (Exception ex)
+                    {
+                        tran.Rollback();
+                        MessageBox.Show("Error al insertar: " + ex.Message);
+                    }
                 }
             }
         }
@@ -112,6 +138,11 @@ namespace ProyectoKamil
         }
 
         private void comboBoxWorkCenter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FuelAllowance_CheckedChanged(object sender, EventArgs e)
         {
 
         }

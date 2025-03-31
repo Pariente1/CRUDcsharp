@@ -172,18 +172,19 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Location = new Point(291, 193);
-            radioButton1.Name = "radioButton1";
+            radioButton1.Name = "FuelAllowance";
             radioButton1.Size = new Size(34, 19);
             radioButton1.TabIndex = 34;
             radioButton1.TabStop = true;
             radioButton1.Text = "Sí";
             radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += FuelAllowance_CheckedChanged;
             // 
             // radioButton2
             // 
             radioButton2.AutoSize = true;
             radioButton2.Location = new Point(291, 218);
-            radioButton2.Name = "radioButton2";
+            radioButton2.Name = "notFuelAllowance";
             radioButton2.Size = new Size(41, 19);
             radioButton2.TabIndex = 35;
             radioButton2.TabStop = true;
