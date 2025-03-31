@@ -88,7 +88,7 @@ namespace ProyectoKamil
             List<SqlParameter> parametros = new List<SqlParameter>();
 
             // Filtros
-
+            
             if (!string.IsNullOrWhiteSpace(textBoxName.Text))
             {
                 query += " AND Nombre = @Nombre";
@@ -112,7 +112,7 @@ namespace ProyectoKamil
                 query += " AND Centro_Trabajo = @Centro";
                 parametros.Add(new SqlParameter("@Centro", (int)selectWorkCenter.Value));
             }
-
+          
             // Ejecución
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -126,21 +126,35 @@ namespace ProyectoKamil
 
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
+                            List<string> empleados = new List<string>();
+
                             if (reader.HasRows)
                             {
+
                                 while (reader.Read())
                                 {
+
                                     string empleadoInfo = $"Nombre: {reader["Nombre"]} " +
                                                           $"{reader["Apellido_Paterno"]} " +
                                                           $"{reader["Apellido_Materno"]}\n" +
                                                           $"RFC: {reader["RFC"]}\n" +
                                                           $"Centro Trabajo: {reader["Centro_Trabajo"]}";
-                                    MessageBox.Show(empleadoInfo, "Empleado encontrado");
+                                    empleados.Add(empleadoInfo);
                                 }
-                            }
-                            else
-                            {
-                                MessageBox.Show("No se encontró ningún empleado con los criterios proporcionados.");
+                                if (empleados.Count == 0)
+                                {
+                                    MessageBox.Show("No se encontró ningún empleado con los criterios proporcionados.");
+                                }
+                                else if (empleados.Count < 5)
+                                {
+                                    // Muestra todos los resultados en un solo MessageBox
+                                    string resultado = string.Join("\n-----------------\n", empleados);
+                                    MessageBox.Show(resultado, "Empleados encontrados");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Se encontraron 5 o más empleados. Refina la búsqueda.", "Aviso");
+                                }
                             }
                         }
                     }
@@ -150,8 +164,6 @@ namespace ProyectoKamil
                     MessageBox.Show("Error al consultar: " + ex.Message);
                 }
             }
-
-
         }
     }
 }

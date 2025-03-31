@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Proyectos\\ProyectoKamil\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\frmviewemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\frmviewemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\frmviewemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\frmviewemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\frmaddemployees.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\frmaddemployees.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,11 +34,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "frmViewEmployees.cs",
+              "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmViewEmployees.cs",
+              "RelativeDocumentMoniker": "ProyectoKamil\\frmViewEmployees.cs",
+              "ToolTip": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmViewEmployees.cs",
+              "RelativeToolTip": "ProyectoKamil\\frmViewEmployees.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T18:09:43.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmViewEmployees.cs [Design]",
+              "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmViewEmployees.cs",
+              "RelativeDocumentMoniker": "ProyectoKamil\\frmViewEmployees.cs",
+              "ToolTip": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmViewEmployees.cs [Design]",
+              "RelativeToolTip": "ProyectoKamil\\frmViewEmployees.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T18:09:39.273Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "frmAddEmployees.cs [Design]",
               "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddEmployees.cs",
               "RelativeDocumentMoniker": "ProyectoKamil\\frmAddEmployees.cs",
@@ -42,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Catalogos.cs",
               "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\Catalogos.cs",
               "RelativeDocumentMoniker": "ProyectoKamil\\Catalogos.cs",
@@ -55,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "frmAddEmployees.cs",
               "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddEmployees.cs",
               "RelativeDocumentMoniker": "ProyectoKamil\\frmAddEmployees.cs",
@@ -68,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "frmAddEmployees.Designer.cs",
               "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmAddEmployees.Designer.cs",
               "RelativeDocumentMoniker": "ProyectoKamil\\frmAddEmployees.Designer.cs",
