@@ -163,7 +163,7 @@
             // comboBoxJobPosition
             // 
             comboBoxJobPosition.FormattingEnabled = true;
-            comboBoxJobPosition.Items.AddRange(new object[] { "Vendedor ", "Cajero", "Directivo" });
+            comboBoxJobPosition.Items.AddRange(new object[] { "Vendedor ", "Cajero"});
             comboBoxJobPosition.Location = new Point(433, 373);
             comboBoxJobPosition.Name = "comboBoxJobPosition";
             comboBoxJobPosition.Size = new Size(242, 40);
