@@ -145,16 +145,13 @@ namespace ProyectoKamil
                                 {
                                     MessageBox.Show("No se encontró ningún empleado con los criterios proporcionados.");
                                 }
-                                else if (empleados.Count < 5)
+                                else
                                 {
                                     // Muestra todos los resultados en un solo MessageBox
                                     string resultado = string.Join("\n-----------------\n", empleados);
                                     MessageBox.Show(resultado, "Empleados encontrados");
                                 }
-                                else
-                                {
-                                    MessageBox.Show("Se encontraron 5 o más empleados. Refina la búsqueda.", "Aviso");
-                                }
+                              
                             }
                         }
                     }
