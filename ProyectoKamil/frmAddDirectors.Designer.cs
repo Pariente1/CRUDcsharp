@@ -39,6 +39,9 @@
             textBoxName = new TextBox();
             btnGuardar = new Button();
             comboBoxWorkCenter = new ComboBox();
+            label1 = new Label();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
             SuspendLayout();
             // 
             // label_Birthdate
@@ -155,11 +158,46 @@
             comboBoxWorkCenter.TabIndex = 32;
             comboBoxWorkCenter.SelectedIndexChanged += comboBoxWorkCenter_SelectedIndexChanged;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(134, 195);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(147, 15);
+            label1.TabIndex = 33;
+            label1.Text = "Prestación de combustible";
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(291, 193);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(34, 19);
+            radioButton1.TabIndex = 34;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Sí";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(291, 218);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(41, 19);
+            radioButton2.TabIndex = 35;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "No";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
             // frmAddDirectors
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(632, 342);
+            Controls.Add(radioButton2);
+            Controls.Add(radioButton1);
+            Controls.Add(label1);
             Controls.Add(comboBoxWorkCenter);
             Controls.Add(btnGuardar);
             Controls.Add(label_Birthdate);
@@ -192,5 +230,8 @@
         private TextBox textBoxName;
         private Button btnGuardar;
         private ComboBox comboBoxWorkCenter;
+        private Label label1;
+        private RadioButton radioButton1;
+        private RadioButton radioButton2;
     }
 }
