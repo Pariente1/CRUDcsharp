@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,90 @@ namespace ProyectoKamil
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            // 1) Validar y obtener valor del comboBoxWorkCenter
+            if (comboBoxWorkCenter.SelectedItem == null)
+            {
+                MessageBox.Show("Selecciona un centro de trabajo.");
+                return;
+            }
+            string selectedWorkCenter = comboBoxWorkCenter.SelectedItem.ToString().Trim();
+
+            if (!Catalogos.WorkCenters.ContainsKey(selectedWorkCenter))
+            {
+                MessageBox.Show("Selecciona un centro de trabajo válido.");
+                return;
+            }
+
+
+
+            string nombre = textBoxName.Text;
+            string apellidoPaterno = textBoxFatherLastname.Text;
+            string apellidoMaterno = textBoxMotherLastname.Text;
+            DateTime fechaNac = dateTimePicker.Value;
+            int idCentro = Catalogos.WorkCenters[selectedWorkCenter];
+            int idPuesto = 3;
+            int isDirective = 0;
+            string rfcCalculado = RFCGenerator.GenerarRFC(nombre, apellidoPaterno, apellidoMaterno, fechaNac);
+
+            // Validación de la fecha para que no sea Default ni menor de edad
+            if (fechaNac == new DateTime(1900, 1, 1))
+            {
+                MessageBox.Show("Por favor selecciona una fecha; no puede ser 01/01/1900.");
+                return;
+            }
+
+            if (fechaNac > new DateTime(2002, 1, 1))
+            {
+                MessageBox.Show("Solo puede ingregar personas mayores de edad.");
+                return;
+            }
+
+            string connectionString = "Data Source=(localdb)\\local;Initial Catalog=ProyectoKamil;Integrated Security=True;TrustServerCertificate=True";
+            string query = "INSERT INTO Empleado (Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, RFC, Centro_Trabajo, ID_Puesto, Directivo) VALUES (@Nombre, @apellidoPaterno, @apellidoMaterno, @fechaNac, @rfcCalculado, @idCentro, @idPuesto, @isDirective)";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Nombre", nombre);
+                        cmd.Parameters.AddWithValue("@apellidoPaterno", apellidoPaterno);
+                        cmd.Parameters.AddWithValue("@apellidoMaterno", apellidoMaterno);
+                        cmd.Parameters.AddWithValue("@fechaNac", fechaNac);
+                        cmd.Parameters.AddWithValue("@rfcCalculado", rfcCalculado);
+                        cmd.Parameters.AddWithValue("@idCentro", idCentro);
+                        cmd.Parameters.AddWithValue("@idPuesto", idPuesto);
+                        cmd.Parameters.AddWithValue("@isDirective", isDirective);
+
+                        int result = cmd.ExecuteNonQuery();
+
+                        if (result > 0)
+                            MessageBox.Show("Empleado agregado correctamente.");
+                        else
+                            MessageBox.Show("No se pudo agregar el empleado.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al insertar: " + ex.Message);
+                }
+            }
+        }
+
+        private void NumeroCentroTrabajo_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxWorkCenter_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

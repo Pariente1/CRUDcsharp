@@ -116,7 +116,7 @@
             // 
             selectWorkCenter.Location = new Point(236, 124);
             selectWorkCenter.Margin = new Padding(2, 1, 2, 1);
-            selectWorkCenter.Maximum = new decimal(new int[] { 3, 0, 0, 0 });
+            selectWorkCenter.Maximum = new decimal(new int[] { 2, 0, 0, 0 });
             selectWorkCenter.Name = "selectWorkCenter";
             selectWorkCenter.Size = new Size(41, 23);
             selectWorkCenter.TabIndex = 8;
