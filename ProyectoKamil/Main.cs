@@ -109,7 +109,7 @@ namespace ProyectoKamil
             StringBuilder sb = new StringBuilder();
 
             foreach (DataRow row in dt.Rows)
-            {                
+            {
                 sb.AppendLine($"Código: {row["ID_Centro"]}, Nombre: {row["Nombre_Centro"]}, Ciudad: {row["Ciudad"]}");
             }
 
@@ -124,6 +124,11 @@ namespace ProyectoKamil
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
         {
 
         }

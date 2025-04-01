@@ -41,6 +41,8 @@
             conexionesToolStripMenuItem = new ToolStripMenuItem();
             conectarABaseDeDatosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1 = new MenuStrip();
+            UpdateButton = new Button();
+            DeleteButton = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -133,6 +135,8 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(DeleteButton);
+            groupBox3.Controls.Add(UpdateButton);
             groupBox3.Controls.Add(button6);
             groupBox3.Controls.Add(button5);
             groupBox3.Location = new Point(425, 95);
@@ -193,6 +197,27 @@
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
+            // UpdateButton
+            // 
+            UpdateButton.Location = new Point(50, 78);
+            UpdateButton.Margin = new Padding(2, 1, 2, 1);
+            UpdateButton.Name = "UpdateButton";
+            UpdateButton.Size = new Size(81, 22);
+            UpdateButton.TabIndex = 2;
+            UpdateButton.Text = "Modificar";
+            UpdateButton.UseVisualStyleBackColor = true;
+            UpdateButton.Click += UpdateButton_Click;
+            // 
+            // DeleteButton
+            // 
+            DeleteButton.Location = new Point(50, 102);
+            DeleteButton.Margin = new Padding(2, 1, 2, 1);
+            DeleteButton.Name = "DeleteButton";
+            DeleteButton.Size = new Size(81, 22);
+            DeleteButton.TabIndex = 3;
+            DeleteButton.Text = "Eliminar";
+            DeleteButton.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -231,5 +256,7 @@
         private ToolStripMenuItem conexionesToolStripMenuItem;
         private ToolStripMenuItem conectarABaseDeDatosToolStripMenuItem;
         private MenuStrip menuStrip1;
+        private Button UpdateButton;
+        private Button DeleteButton;
     }
 }
