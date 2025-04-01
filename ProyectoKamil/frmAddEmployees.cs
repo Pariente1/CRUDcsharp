@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static ProyectoKamil.RFCGenerator;
 using static ProyectoKamil.Catalogos;
+using ProyectoKamil.Data;
+using static ProyectoKamil.Data.EmployeeRepository;
+using static ProyectoKamil.EmployeeDto;
 
 
 namespace ProyectoKamil
@@ -68,59 +71,67 @@ namespace ProyectoKamil
                 return;
             }
 
-            string nombre = textBoxName.Text;
-            string apellidoPaterno = textBoxFatherLastname.Text;
-            string apellidoMaterno = textBoxMotherLastname.Text;
+            // 3) Recolectar datos del formulario
+            string nombre = textBoxName.Text.Trim();
+            string apellidoPaterno = textBoxFatherLastname.Text.Trim();
+            string apellidoMaterno = textBoxMotherLastname.Text.Trim();
             DateTime fechaNac = dateTimePicker.Value;
             int idCentro = Catalogos.WorkCenters[selectedWorkCenter];
             int idPuesto = Catalogos.JobPositions[selectedJobPosition];
-            int isDirective = 0;
-            string rfcCalculado = RFCGenerator.GenerarRFC(nombre, apellidoPaterno, apellidoMaterno, fechaNac);
+            bool isDirectivo = false; // Aun cuando sea 0, si no manejes un checkbox directo
 
-            // Validación de la fecha para que no sea Default ni menor de edad
+            // 4) Validar la fecha
             if (fechaNac == new DateTime(1900, 1, 1))
             {
                 MessageBox.Show("Por favor selecciona una fecha; no puede ser 01/01/1900.");
                 return;
             }
-
             if (fechaNac > new DateTime(2002, 1, 1))
             {
-                MessageBox.Show("Solo puede ingregar personas mayores de edad.");
+                MessageBox.Show("Solo puede ingresar personas mayores de edad.");
                 return;
             }
 
-            string connectionString = "Data Source=(localdb)\\local;Initial Catalog=ProyectoKamil;Integrated Security=True;TrustServerCertificate=True";
-            string query = "INSERT INTO Empleado (Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, RFC, Centro_Trabajo, ID_Puesto, Directivo) VALUES (@Nombre, @apellidoPaterno, @apellidoMaterno, @fechaNac, @rfcCalculado, @idCentro, @idPuesto, @isDirective)";
+            // 5) Generar RFC
+            string rfcCalculado = RFCGenerator.GenerarRFC(nombre, apellidoPaterno, apellidoMaterno, fechaNac);
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            // 6) Construir el DTO
+            var nuevoEmpleado = new EmployeeDto
             {
-                try
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Nombre", nombre);
-                        cmd.Parameters.AddWithValue("@apellidoPaterno", apellidoPaterno);
-                        cmd.Parameters.AddWithValue("@apellidoMaterno", apellidoMaterno);
-                        cmd.Parameters.AddWithValue("@fechaNac", fechaNac);
-                        cmd.Parameters.AddWithValue("@rfcCalculado", rfcCalculado);
-                        cmd.Parameters.AddWithValue("@idCentro", idCentro);
-                        cmd.Parameters.AddWithValue("@idPuesto", idPuesto);
-                        cmd.Parameters.AddWithValue("@isDirective", isDirective);
+                Nombre = nombre,
+                ApellidoPaterno = apellidoPaterno,
+                ApellidoMaterno = apellidoMaterno,
+                FechaNacimiento = fechaNac,
+                RFC = rfcCalculado,
+                CentroTrabajo = idCentro,
+                IdPuesto = idPuesto,
+                Directivo = isDirectivo
+            };
 
-                        int result = cmd.ExecuteNonQuery();
+            // 7) Insertar en la BD vía EmployeeRepository
+            try
+            {
+                int newId = EmployeeRepository.InsertEmpleado(nuevoEmpleado);
 
-                        if (result > 0)
-                            MessageBox.Show("Empleado agregado correctamente.");
-                        else
-                            MessageBox.Show("No se pudo agregar el empleado.");
-                    }
-                }
-                catch (Exception ex)
+                if (newId > 0)
                 {
-                    MessageBox.Show("Error al insertar: " + ex.Message);
+                    MessageBox.Show($"Empleado agregado correctamente. ID generado: {newId}");
+                    // Limpia los campos si quieres
+                    textBoxName.Clear();
+                    textBoxFatherLastname.Clear();
+                    textBoxMotherLastname.Clear();
+                    comboBoxWorkCenter.SelectedIndex = -1;
+                    comboBoxJobPosition.SelectedIndex = -1;
+                    dateTimePicker.Value = new DateTime(1900, 1, 1);
                 }
+                else
+                {
+                    MessageBox.Show("No se pudo agregar el empleado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al insertar: " + ex.Message);
             }
 
         }
