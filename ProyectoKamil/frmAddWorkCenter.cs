@@ -53,19 +53,33 @@ namespace ProyectoKamil
         {
             string nameCenter = textBoxName.Text;
             string nameCity = textBoxCity.Text;
+
+            // Validar que ambos campos tengan valor
+            if (string.IsNullOrEmpty(nameCenter))
+            {
+                MessageBox.Show("El nombre del centro es obligatorio.");
+                return;
+            }
+            if (string.IsNullOrEmpty(nameCity))
+            {
+                MessageBox.Show("La ciudad es obligatoria.");
+                return;
+            }
+
             try
             {
                 int newId = WorkCenterRepository.InsertWorkCenter(nameCenter, nameCity);
                 if (newId > 0) {
-                    WorkCenterRepository.InsertWorkCenter(nameCenter, nameCity);
+                    
                     MessageBox.Show("Se agregó el centro de trabajo con éxito. " + newId);
+
+                    // Limpiamos el box para que el usuario pueda agregar otro WorkCenter
+                    textBoxName.Clear();
+                    textBoxCity.Clear();
                 }
                 else
                     MessageBox.Show("El nombre del centro es obligatorio.");
-
-                // Limpiamos el box para que el usuario pueda agregar otro WorkCenter
-                textBoxName.Clear();
-                textBoxCity.Clear();
+                
             }
             catch (Exception ex) {
                 MessageBox.Show("Error al insertar: " + ex.Message);
