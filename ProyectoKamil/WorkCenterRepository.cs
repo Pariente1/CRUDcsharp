@@ -51,13 +51,14 @@ namespace ProyectoKamil.Data
             return newId;
         }
 
-        public static bool UpdateWorkCenter(int idCentro, string nombreCentro, string ciudad)
+        public static bool UpdateWorkCenter(string nombreCentro, string nombreCentroNuevo, string ciudad)
         {
             bool success = false;
-            string query = "UPDATE Catalogo_Centros SET Nombre_Centro = @NombreCentro, Ciudad = @Ciudad WHERE Nombre_Centro = @NombreCentro";
+            string query = "UPDATE Catalogo_Centros SET Nombre_Centro = @NombreCentroNuevo, Ciudad = @Ciudad WHERE Nombre_Centro = @NombreCentro";
             using (SqlConnection conn = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
+                cmd.Parameters.AddWithValue("@NombreCentroNuevo", nombreCentroNuevo);
                 cmd.Parameters.AddWithValue("@NombreCentro", nombreCentro);
                 cmd.Parameters.AddWithValue("@Ciudad", ciudad);                
                 conn.Open();
