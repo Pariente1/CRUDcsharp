@@ -28,12 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "frmDeleteWorkCenter";
+            button_Delete = new Button();
+            label_DeleteNameCenter = new Label();
+            textBox_DeleteCenterName = new TextBox();
+            SuspendLayout();
+            // 
+            // button_Delete
+            // 
+            button_Delete.Location = new Point(339, 213);
+            button_Delete.Name = "button_Delete";
+            button_Delete.Size = new Size(75, 23);
+            button_Delete.TabIndex = 13;
+            button_Delete.Text = "Borrar";
+            button_Delete.UseVisualStyleBackColor = true;
+            button_Delete.Click += button_Delete_Click;
+            // 
+            // label_DeleteNameCenter
+            // 
+            label_DeleteNameCenter.AutoSize = true;
+            label_DeleteNameCenter.Location = new Point(257, 149);
+            label_DeleteNameCenter.Name = "label_DeleteNameCenter";
+            label_DeleteNameCenter.Size = new Size(109, 15);
+            label_DeleteNameCenter.TabIndex = 12;
+            label_DeleteNameCenter.Text = "Nombre del Centro";
+            // 
+            // textBox_DeleteCenterName
+            // 
+            textBox_DeleteCenterName.Location = new Point(379, 146);
+            textBox_DeleteCenterName.Name = "textBox_DeleteCenterName";
+            textBox_DeleteCenterName.Size = new Size(100, 23);
+            textBox_DeleteCenterName.TabIndex = 11;
+            textBox_DeleteCenterName.TextChanged += textBox_DeleteCenterName_TextChanged;
+            // 
+            // frmDeleteWorkCenter
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(button_Delete);
+            Controls.Add(label_DeleteNameCenter);
+            Controls.Add(textBox_DeleteCenterName);
+            Name = "frmDeleteWorkCenter";
+            Text = "frmDeleteWorkCenter";
+            Load += frmDeleteWorkCenter_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button button_Delete;
+        private Label label_DeleteNameCenter;
+        private TextBox textBox_DeleteCenterName;
     }
 }

@@ -70,15 +70,7 @@ namespace ProyectoKamil
             if (string.IsNullOrEmpty(newNameCenter))
             {
                 newNameCenter = nameCenter;
-            }
-
-            if (string.IsNullOrEmpty(nameCenter))
-            {
-                MessageBox.Show("El nombre del centro es obligatorio.");
-                return;
-            }
-
-                       
+            }                     
 
             bool updated= WorkCenterRepository.UpdateWorkCenter(nameCenter, newNameCenter, nameCity);
             if (updated)
