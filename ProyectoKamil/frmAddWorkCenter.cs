@@ -30,5 +30,20 @@ namespace ProyectoKamil
         {
 
         }
+
+        private void label_Name_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxNameCenter_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxCity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

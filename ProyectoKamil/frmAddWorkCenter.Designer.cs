@@ -28,26 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            label_Name = new Label();
+            label_FatherLastname = new Label();
+            textBoxCity = new TextBox();
+            textBoxName = new TextBox();
+            btnGuardar = new Button();
             SuspendLayout();
             // 
-            // label1
+            // label_Name
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(247, 321);
-            label1.Name = "label1";
-            label1.Size = new Size(640, 45);
-            label1.TabIndex = 0;
-            label1.Text = "Vista de Agregar Centros de trabajo Testing";
-            label1.Click += label1_Click;
+            label_Name.AutoSize = true;
+            label_Name.Location = new Point(174, 79);
+            label_Name.Margin = new Padding(2, 0, 2, 0);
+            label_Name.Name = "label_Name";
+            label_Name.RightToLeft = RightToLeft.Yes;
+            label_Name.Size = new Size(109, 15);
+            label_Name.TabIndex = 33;
+            label_Name.Text = "Nombre del Centro";
+            label_Name.Click += label_Name_Click;
+            // 
+            // label_FatherLastname
+            // 
+            label_FatherLastname.AutoSize = true;
+            label_FatherLastname.Location = new Point(174, 106);
+            label_FatherLastname.Margin = new Padding(2, 0, 2, 0);
+            label_FatherLastname.Name = "label_FatherLastname";
+            label_FatherLastname.RightToLeft = RightToLeft.Yes;
+            label_FatherLastname.Size = new Size(144, 15);
+            label_FatherLastname.TabIndex = 32;
+            label_FatherLastname.Text = "Ciudad a la que pertenece";
+            // 
+            // textBoxFatherLastname
+            // 
+            textBoxCity.Location = new Point(331, 103);
+            textBoxCity.Margin = new Padding(2, 1, 2, 1);
+            textBoxCity.Size = new Size(110, 23);
+            textBoxCity.Name = "textBoxFatherLastname";
+            textBoxCity.TabIndex = 31;
+            textBoxCity.TextAlign = HorizontalAlignment.Center;
+            textBoxCity.UseWaitCursor = true;
+            textBoxCity.TextChanged += textBoxCity_TextChanged;
+            // 
+            // textBoxName
+            // 
+            textBoxName.Location = new Point(331, 76);
+            textBoxName.Margin = new Padding(2, 1, 2, 1);
+            textBoxName.Name = "textBoxName";
+            textBoxName.Size = new Size(110, 23);
+            textBoxName.TabIndex = 30;
+            textBoxName.TextAlign = HorizontalAlignment.Center;
+            textBoxName.UseWaitCursor = true;
+            textBoxName.TextChanged += textBoxNameCenter_TextChanged;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Location = new Point(266, 165);
+            btnGuardar.Margin = new Padding(2, 1, 2, 1);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(81, 22);
+            btnGuardar.TabIndex = 34;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
             // 
             // frmAddWorkCenter
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1174, 729);
-            Controls.Add(label1);
+            ClientSize = new Size(632, 342);
+            Controls.Add(btnGuardar);
+            Controls.Add(label_Name);
+            Controls.Add(label_FatherLastname);
+            Controls.Add(textBoxCity);
+            Controls.Add(textBoxName);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "frmAddWorkCenter";
             Text = "Agregar centro de trabajo";
             Load += frmAddWorkCenter_Load;
@@ -57,6 +110,10 @@
 
         #endregion
 
-        private Label label1;
+        private Label label_Name;
+        private Label label_FatherLastname;
+        private TextBox textBoxCity;
+        private TextBox textBoxName;
+        private Button btnGuardar;
     }
 }
