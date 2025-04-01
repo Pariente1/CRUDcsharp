@@ -55,21 +55,42 @@ namespace ProyectoKamil
             string newNameCenter = textBox_NewCenterName.Text;
             string nameCity = textBox_NewCityName.Text;
 
-            // Validar que ambos campos tengan valor
             if (string.IsNullOrEmpty(nameCenter))
             {
                 MessageBox.Show("El nombre del centro es obligatorio.");
                 return;
             }
+
+            bool exists = WorkCenterRepository.WorkCenterExists(nameCenter);
+            if (!exists) {
+                MessageBox.Show("El centro no existe.");
+                return;
+            }
+
             if (string.IsNullOrEmpty(newNameCenter))
             {
                 newNameCenter = nameCenter;
             }
 
+            if (string.IsNullOrEmpty(nameCenter))
+            {
+                MessageBox.Show("El nombre del centro es obligatorio.");
+                return;
+            }
 
-            WorkCenterRepository.UpdateWorkCenter(nameCenter, newNameCenter, nameCity);
-            string resultado = string.Join("\n-----------------\n", "Se cambió nombre de centro: " + nameCenter + "\n" + "Por:" + newNameCenter + "\n\n" + "Se cambió la ciudad a: " + nameCity);
-            MessageBox.Show(resultado, "Cambio exitoso");
+                       
+
+            bool updated= WorkCenterRepository.UpdateWorkCenter(nameCenter, newNameCenter, nameCity);
+            if (updated)
+            {
+                string resultado = $"Se cambió el nombre del centro: {nameCenter}\nPor: {newNameCenter}\n" +
+                                     $"Se cambió la ciudad a: {nameCity}";
+                MessageBox.Show(resultado, "Cambio exitoso");
+            }
+            else
+            {
+                MessageBox.Show("No se pudo actualizar el centro.");
+            }
 
 
         }

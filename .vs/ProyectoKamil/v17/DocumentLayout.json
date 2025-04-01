@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\workcenterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\frmviewemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\frmviewemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\frmupdateworkcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\frmupdateworkcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\frmviewemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|solutionrelative:proyectokamil\\frmviewemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E724D1F-35C3-4AA3-9523-237AAE0C82B1}|ProyectoKamil\\ProyectoKamil.csproj|c:\\proyectos\\proyectokamil\\proyectokamil\\frmviewemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -60,7 +60,7 @@
               "RelativeDocumentMoniker": "ProyectoKamil\\frmUpdateWorkCenter.cs",
               "ToolTip": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmUpdateWorkCenter.cs*",
               "RelativeToolTip": "ProyectoKamil\\frmUpdateWorkCenter.cs*",
-              "ViewState": "AgIAACYAAAAAAAAAAAAYwEMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwFwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T18:56:29.222Z",
               "IsPinned": true,
@@ -68,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "frmViewEmployees.cs",
               "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmViewEmployees.cs",
               "RelativeDocumentMoniker": "ProyectoKamil\\frmViewEmployees.cs",
@@ -99,14 +99,14 @@
               "RelativeDocumentMoniker": "ProyectoKamil\\WorkCenterRepository.cs",
               "ToolTip": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\WorkCenterRepository.cs",
               "RelativeToolTip": "ProyectoKamil\\WorkCenterRepository.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowDsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T19:04:50.781Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "frmUpdateWorkCenter.cs [Design]",
               "DocumentMoniker": "C:\\Proyectos\\ProyectoKamil\\ProyectoKamil\\frmUpdateWorkCenter.cs",
               "RelativeDocumentMoniker": "ProyectoKamil\\frmUpdateWorkCenter.cs",
