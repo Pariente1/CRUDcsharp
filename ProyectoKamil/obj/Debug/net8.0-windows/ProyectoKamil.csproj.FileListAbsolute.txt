@@ -60,6 +60,7 @@ C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmAddEmployees.resources
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmAddWorkCenter.resources
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmDeleteWorkCenter.resources
+C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmUpdateEmployee.resources
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmUpdateWorkCenter.resources
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmViewDirectors.resources
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmViewEmployees.resources
