@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoKamil
 {
-    internal class EmployeeDto
+    public class EmployeeDto
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
