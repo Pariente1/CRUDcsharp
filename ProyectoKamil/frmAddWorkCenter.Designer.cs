@@ -58,12 +58,12 @@
             label_FatherLastname.TabIndex = 32;
             label_FatherLastname.Text = "Ciudad a la que pertenece";
             // 
-            // textBoxFatherLastname
+            // textBoxCity
             // 
             textBoxCity.Location = new Point(331, 103);
             textBoxCity.Margin = new Padding(2, 1, 2, 1);
+            textBoxCity.Name = "textBoxCity";
             textBoxCity.Size = new Size(110, 23);
-            textBoxCity.Name = "textBoxFatherLastname";
             textBoxCity.TabIndex = 31;
             textBoxCity.TextAlign = HorizontalAlignment.Center;
             textBoxCity.UseWaitCursor = true;
@@ -89,6 +89,7 @@
             btnGuardar.TabIndex = 34;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // frmAddWorkCenter
             // 
