@@ -74,3 +74,5 @@ C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\refint\Proyect
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.pdb
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.genruntimeconfig.cache
 C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ref\ProyectoKamil.dll
+C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmDeleteWorkCenter.resources
+C:\Proyectos\ProyectoKamil\ProyectoKamil\obj\Debug\net8.0-windows\ProyectoKamil.frmUpdateWorkCenter.resources

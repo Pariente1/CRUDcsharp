@@ -123,12 +123,19 @@ namespace ProyectoKamil
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void UpdateButton_Click(object sender, EventArgs e)
         {
-
+            frmUpdateWorkCenter window = new frmUpdateWorkCenter();
+            window.ShowDialog();
         }
 
-        private void UpdateButton_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            frmDeleteWorkCenter window = new frmDeleteWorkCenter();
+            window.ShowDialog();
+        }
+
+        private void Button_UpdateDirectors_Click(object sender, EventArgs e)
         {
 
         }

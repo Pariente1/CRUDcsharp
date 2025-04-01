@@ -30,19 +30,23 @@
         {
             label1 = new Label();
             groupBox1 = new GroupBox();
+            Button_DeleteEmployees = new Button();
+            Button_UpdateEmployees = new Button();
             button2 = new Button();
             addWorker = new Button();
             groupBox2 = new GroupBox();
+            Button_DeleteDirectors = new Button();
+            Button_UpdateDirectors = new Button();
             button4 = new Button();
             button3 = new Button();
             groupBox3 = new GroupBox();
+            Button_DeleteWorkCenter = new Button();
+            Button_UpdateWorkCenter = new Button();
             button6 = new Button();
             button5 = new Button();
             conexionesToolStripMenuItem = new ToolStripMenuItem();
             conectarABaseDeDatosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1 = new MenuStrip();
-            UpdateButton = new Button();
-            DeleteButton = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -63,6 +67,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(Button_DeleteEmployees);
+            groupBox1.Controls.Add(Button_UpdateEmployees);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(addWorker);
             groupBox1.Location = new Point(11, 95);
@@ -74,6 +80,26 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Empleados";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // Button_DeleteEmployees
+            // 
+            Button_DeleteEmployees.Location = new Point(51, 102);
+            Button_DeleteEmployees.Margin = new Padding(2, 1, 2, 1);
+            Button_DeleteEmployees.Name = "Button_DeleteEmployees";
+            Button_DeleteEmployees.Size = new Size(81, 22);
+            Button_DeleteEmployees.TabIndex = 5;
+            Button_DeleteEmployees.Text = "Eliminar";
+            Button_DeleteEmployees.UseVisualStyleBackColor = true;
+            // 
+            // Button_UpdateEmployees
+            // 
+            Button_UpdateEmployees.Location = new Point(51, 78);
+            Button_UpdateEmployees.Margin = new Padding(2, 1, 2, 1);
+            Button_UpdateEmployees.Name = "Button_UpdateEmployees";
+            Button_UpdateEmployees.Size = new Size(81, 22);
+            Button_UpdateEmployees.TabIndex = 4;
+            Button_UpdateEmployees.Text = "Modificar";
+            Button_UpdateEmployees.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -99,6 +125,8 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(Button_DeleteDirectors);
+            groupBox2.Controls.Add(Button_UpdateDirectors);
             groupBox2.Controls.Add(button4);
             groupBox2.Controls.Add(button3);
             groupBox2.Location = new Point(214, 95);
@@ -110,6 +138,27 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Directores";
             groupBox2.Enter += groupBox2_Enter;
+            // 
+            // Button_DeleteDirectors
+            // 
+            Button_DeleteDirectors.Location = new Point(48, 102);
+            Button_DeleteDirectors.Margin = new Padding(2, 1, 2, 1);
+            Button_DeleteDirectors.Name = "Button_DeleteDirectors";
+            Button_DeleteDirectors.Size = new Size(81, 22);
+            Button_DeleteDirectors.TabIndex = 5;
+            Button_DeleteDirectors.Text = "Eliminar";
+            Button_DeleteDirectors.UseVisualStyleBackColor = true;
+            // 
+            // Button_UpdateDirectors
+            // 
+            Button_UpdateDirectors.Location = new Point(48, 78);
+            Button_UpdateDirectors.Margin = new Padding(2, 1, 2, 1);
+            Button_UpdateDirectors.Name = "Button_UpdateDirectors";
+            Button_UpdateDirectors.Size = new Size(81, 22);
+            Button_UpdateDirectors.TabIndex = 4;
+            Button_UpdateDirectors.Text = "Modificar";
+            Button_UpdateDirectors.UseVisualStyleBackColor = true;
+            Button_UpdateDirectors.Click += Button_UpdateDirectors_Click;
             // 
             // button4
             // 
@@ -135,8 +184,8 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(DeleteButton);
-            groupBox3.Controls.Add(UpdateButton);
+            groupBox3.Controls.Add(Button_DeleteWorkCenter);
+            groupBox3.Controls.Add(Button_UpdateWorkCenter);
             groupBox3.Controls.Add(button6);
             groupBox3.Controls.Add(button5);
             groupBox3.Location = new Point(425, 95);
@@ -148,6 +197,28 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Centros";
             groupBox3.Enter += groupBox3_Enter;
+            // 
+            // Button_DeleteWorkCenter
+            // 
+            Button_DeleteWorkCenter.Location = new Point(50, 102);
+            Button_DeleteWorkCenter.Margin = new Padding(2, 1, 2, 1);
+            Button_DeleteWorkCenter.Name = "Button_DeleteWorkCenter";
+            Button_DeleteWorkCenter.Size = new Size(81, 22);
+            Button_DeleteWorkCenter.TabIndex = 3;
+            Button_DeleteWorkCenter.Text = "Eliminar";
+            Button_DeleteWorkCenter.UseVisualStyleBackColor = true;
+            Button_DeleteWorkCenter.Click += DeleteButton_Click;
+            // 
+            // Button_UpdateWorkCenter
+            // 
+            Button_UpdateWorkCenter.Location = new Point(50, 78);
+            Button_UpdateWorkCenter.Margin = new Padding(2, 1, 2, 1);
+            Button_UpdateWorkCenter.Name = "Button_UpdateWorkCenter";
+            Button_UpdateWorkCenter.Size = new Size(81, 22);
+            Button_UpdateWorkCenter.TabIndex = 2;
+            Button_UpdateWorkCenter.Text = "Modificar";
+            Button_UpdateWorkCenter.UseVisualStyleBackColor = true;
+            Button_UpdateWorkCenter.Click += UpdateButton_Click;
             // 
             // button6
             // 
@@ -197,27 +268,6 @@
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
-            // UpdateButton
-            // 
-            UpdateButton.Location = new Point(50, 78);
-            UpdateButton.Margin = new Padding(2, 1, 2, 1);
-            UpdateButton.Name = "UpdateButton";
-            UpdateButton.Size = new Size(81, 22);
-            UpdateButton.TabIndex = 2;
-            UpdateButton.Text = "Modificar";
-            UpdateButton.UseVisualStyleBackColor = true;
-            UpdateButton.Click += UpdateButton_Click;
-            // 
-            // DeleteButton
-            // 
-            DeleteButton.Location = new Point(50, 102);
-            DeleteButton.Margin = new Padding(2, 1, 2, 1);
-            DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new Size(81, 22);
-            DeleteButton.TabIndex = 3;
-            DeleteButton.Text = "Eliminar";
-            DeleteButton.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -256,7 +306,11 @@
         private ToolStripMenuItem conexionesToolStripMenuItem;
         private ToolStripMenuItem conectarABaseDeDatosToolStripMenuItem;
         private MenuStrip menuStrip1;
-        private Button UpdateButton;
-        private Button DeleteButton;
+        private Button Button_UpdateWorkCenter;
+        private Button Button_DeleteWorkCenter;
+        private Button Button_DeleteEmployees;
+        private Button Button_UpdateEmployees;
+        private Button Button_DeleteDirectors;
+        private Button Button_UpdateDirectors;
     }
 }
