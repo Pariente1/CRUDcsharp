@@ -3,6 +3,9 @@ using Microsoft.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Diagnostics;
+using ProyectoKamil.Data;
+using System.Data;
+using System.Text;
 
 namespace ProyectoKamil
 {
@@ -95,11 +98,32 @@ namespace ProyectoKamil
 
         private void frmViewWorkCenter_Click(object sender, EventArgs e)
         {
-            frmViewWorkCenter window = new frmViewWorkCenter();
-            window.ShowDialog();
+            DataTable dt = WorkCenterRepository.GetWorkCenters();
+
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("No se encontraron centros de trabajo.", "Centros de Trabajo");
+                return;
+            }
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (DataRow row in dt.Rows)
+            {                
+                sb.AppendLine($"Código: {row["ID_Centro"]}, Nombre: {row["Nombre_Centro"]}, Ciudad: {row["Ciudad"]}");
+            }
+
+            MessageBox.Show(sb.ToString(), "Centros de Trabajo");
+
+
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

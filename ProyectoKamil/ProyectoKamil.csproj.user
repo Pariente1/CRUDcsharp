@@ -4,9 +4,6 @@
     <Compile Update="frmAddWorkCenter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmViewWorkCenter.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="frmViewDirectors.cs">
       <SubType>Form</SubType>
     </Compile>
