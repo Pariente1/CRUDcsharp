@@ -7,6 +7,20 @@ namespace ProyectoKamil.Data
     public static class WorkCenterRepository
     {
         private static string connectionString = "Data Source=(localdb)\\local;Initial Catalog=ProyectoKamil;Integrated Security=True;TrustServerCertificate=True";
+        public static bool WorkCenterExists(string nombreCentro)
+        {
+            bool exists = false;
+            string query = "SELECT COUNT(*) FROM Catalogo_Centros WHERE Nombre_Centro = @NombreCentro";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@NombreCentro", nombreCentro);
+                conn.Open();
+                exists = Convert.ToInt32(cmd.ExecuteScalar()) > 0;
+            }
+            return exists;
+        }
 
         public static DataTable GetWorkCenters()
         {
