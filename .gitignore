@@ -1,6 +1,7 @@
 # Ignorar bin y obj
-bin/
-obj/
+ProyectoKamil/bin/
+ProyectoKamil/obj/
+
 
 # Ignorar carpeta de configuración local de VS
 .vs/
@@ -15,3 +16,5 @@ obj/
 *.vscode/
 *.vsidx
 *.csproj.FileListAbsolute.txt
+
+
