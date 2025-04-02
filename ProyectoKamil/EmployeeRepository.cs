@@ -98,9 +98,7 @@ namespace ProyectoKamil.Data
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
-                    {
-                        string materno = reader["Apellido_Paterno"].ToString();
-                        MessageBox.Show("Apellido Paterno leído: " + materno);
+                    {                     
 
                         empleados.Add(new EmployeeDto
                         {

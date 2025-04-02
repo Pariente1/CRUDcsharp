@@ -52,6 +52,7 @@
             btnGuardar.TabIndex = 39;
             btnGuardar.Text = "Modificar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // comboBoxJobPosition
             // 
