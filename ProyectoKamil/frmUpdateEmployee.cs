@@ -15,9 +15,23 @@ namespace ProyectoKamil
 {
     public partial class frmUpdateEmployee : Form
     {
+        private EmployeeDto _empleado = new EmployeeDto();
         public frmUpdateEmployee()
         {
             InitializeComponent();
+            CargarDatos();
+        }
+
+        private void CargarDatos()
+        {
+            textBoxName.Text = _empleado.Nombre ?? "";
+            textBoxFatherLastname.Text = _empleado.ApellidoPaterno ?? ""; ;
+            textBoxMotherLastname.Text = _empleado.ApellidoMaterno ?? ""; ;
+            dateTimePicker.Value = new DateTime(2000, 1, 1);
+            textBoxSelectRFC.Text = _empleado.RFC;
+            //  ComboBoxes:
+            comboBoxWorkCenter.SelectedValue = _empleado.CentroTrabajo;
+            comboBoxJobPosition.SelectedValue = _empleado.IdPuesto;
         }
 
         private void textBoxName_TextChanged(object sender, EventArgs e)
@@ -53,7 +67,7 @@ namespace ProyectoKamil
         private void btnGetAndUpdate_Click(object sender, EventArgs e)
         {
             // Recopilar los criterios de busqueda desde la interfaz
-            string? nombre = string.IsNullOrWhiteSpace(textBoxName.Text)
+            string? nombre = string.IsNullOrEmpty(textBoxName.Text.Trim())
                 ? null
                 : textBoxName.Text.Trim();
 
@@ -71,24 +85,22 @@ namespace ProyectoKamil
                 fechaNac = dateTimePicker.Value.Date;
             }
 
-            //Workcenter ComboBox
+            // Cargar los ComboBoxes (asumiendo que ya se han asignado en el Load del formulario)
             DataTable dtWorkCenters = WorkCenterRepository.GetWorkCenters();
-            int centroTrabajo = Convert.ToInt32(comboBoxWorkCenter.SelectedValue);
+            DataTable dtJobPositions = JobPositionRepository.GetJobPositions();
 
-            //JonPosition ComboBox
-            DataTable dtJobPosition = JobPositionRepository.GetJobPositions();
-            int puestoTrabajo = Convert.ToInt32(comboBoxJobPosition.SelectedValue);
-            
             string? rfc = string.IsNullOrWhiteSpace(textBoxSelectRFC.Text)
              ? null
-             : textBoxSelectRFC.Text.Trim();                      
+             : textBoxSelectRFC.Text.Trim();
 
-
+            // Declarar variables como int? para permitir null
+            int? centroTrabajo = null;
             if (comboBoxWorkCenter.SelectedValue != null && Convert.ToInt32(comboBoxWorkCenter.SelectedValue) != 0)
             {
                 centroTrabajo = Convert.ToInt32(comboBoxWorkCenter.SelectedValue);
             }
 
+            int? puestoTrabajo = null;
             if (comboBoxJobPosition.SelectedValue != null && Convert.ToInt32(comboBoxJobPosition.SelectedValue) != 0)
             {
                 puestoTrabajo = Convert.ToInt32(comboBoxJobPosition.SelectedValue);
@@ -105,8 +117,7 @@ namespace ProyectoKamil
             }
 
 
-
-            // 4) Construir la cadena con los resultados
+            // 4) (Opcional) Construir la cadena para mostrar resultados en MessageBox
             List<string> empleadosInfo = new List<string>();
             foreach (var emp in listaEmpleados)
             {
@@ -117,12 +128,14 @@ namespace ProyectoKamil
                 empleadosInfo.Add(info);
             }
 
-            // 5) Mostrar los datos en un MessageBox (o en un DataGridView si prefieres)
 
             string resultado = string.Join("\n-----------------\n", empleadosInfo);
             MessageBox.Show(resultado, "Empleados encontrados");
 
-            frmUpdatingEmployee window = new frmUpdatingEmployee();
+            // 5) Abrir el formulario de actualización con el primer empleado encontrado
+            EmployeeDto empleadoSeleccionado = listaEmpleados[0];
+
+            frmUpdatingEmployee window = new frmUpdatingEmployee(empleadoSeleccionado);
             window.ShowDialog();
         }
 

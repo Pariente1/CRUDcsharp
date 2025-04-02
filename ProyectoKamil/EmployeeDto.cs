@@ -17,5 +17,8 @@ namespace ProyectoKamil
         public int CentroTrabajo { get; set; }
         public int IdPuesto { get; set; }
         public bool Directivo { get; set; }
+
     }
-}
+        
+
+    }

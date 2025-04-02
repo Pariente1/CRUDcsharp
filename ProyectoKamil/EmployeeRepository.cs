@@ -55,13 +55,13 @@ namespace ProyectoKamil.Data
             if (!string.IsNullOrEmpty(apellidoPaterno))
             {
                 query += " AND Apellido_Paterno = @apellidoPaterno";
-                parametros.Add(new SqlParameter("@Apellido_Paterno", apellidoPaterno));
+                parametros.Add(new SqlParameter("@apellidoPaterno", apellidoPaterno));
             }
 
             if (!string.IsNullOrEmpty(apellidoMaterno))
             {
                 query += " AND Apellido_Materno = @apellidoMaterno";
-                parametros.Add(new SqlParameter("@Apellido_Materno", apellidoMaterno));
+                parametros.Add(new SqlParameter("@apellidoMaterno", apellidoMaterno));
             }
 
             if (!string.IsNullOrEmpty(rfc))
@@ -99,6 +99,9 @@ namespace ProyectoKamil.Data
                 {
                     while (reader.Read())
                     {
+                        string materno = reader["Apellido_Paterno"].ToString();
+                        MessageBox.Show("Apellido Paterno leído: " + materno);
+
                         empleados.Add(new EmployeeDto
                         {
                             Id = Convert.ToInt32(reader["ID_Empleado"]),
