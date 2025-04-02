@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoKamil
+namespace ProyectoKamil.Dto
 {
     public class EmployeeDto
     {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 using Microsoft.Data.SqlClient;
+using ProyectoKamil.Dto;
 
 namespace ProyectoKamil.Data
 {
@@ -161,15 +162,6 @@ namespace ProyectoKamil.Data
                 if (!primera) queryBuilder.Append(", ");
                 queryBuilder.Append("Fecha_Nacimiento = @FechaNacimiento");
                 parametros.Add(new SqlParameter("@FechaNacimiento", actualizado.FechaNacimiento));
-                primera = false;
-            }
-
-            // Comparar RFC
-            if (!actualizado.RFC.Equals(original.RFC, StringComparison.Ordinal))
-            {
-                if (!primera) queryBuilder.Append(", ");
-                queryBuilder.Append("RFC = @RFC");
-                parametros.Add(new SqlParameter("@RFC", actualizado.RFC));
                 primera = false;
             }
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using ProyectoKamil.Data;
+using ProyectoKamil.Dto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

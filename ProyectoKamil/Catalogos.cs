@@ -20,5 +20,8 @@ namespace ProyectoKamil
             { "Centro Guasave", 2 },
             { "Centro Navolato", 3 }
         };
+
+
+
     }
 }

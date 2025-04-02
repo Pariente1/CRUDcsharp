@@ -1,4 +1,5 @@
 ﻿using ProyectoKamil.Data;
+using ProyectoKamil.Dto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,7 +55,10 @@ namespace ProyectoKamil
                     IdPuesto = comboBoxJobPosition.SelectedValue != null && Convert.ToInt32(comboBoxJobPosition.SelectedValue) != 0
                          ? Convert.ToInt32(comboBoxJobPosition.SelectedValue)
                          : 0,
-                    Directivo = false  // O el valor que corresponda
+                    CentroTrabajo = comboBoxWorkCenter.SelectedValue != null && Convert.ToInt32(comboBoxWorkCenter.SelectedValue) != 0
+                         ? Convert.ToInt32(comboBoxWorkCenter.SelectedValue)
+                         : 0,
+                    Directivo = false
                 };
 
                 bool actualizado = EmployeeRepository.UpdateEmpleado(_empleado, nuevoEmpleado);
@@ -66,6 +70,25 @@ namespace ProyectoKamil
 
             }
         }
-            
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxWorkCenter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMotherLastname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmUpdatingEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

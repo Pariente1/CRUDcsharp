@@ -7,9 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static ProyectoKamil.EmployeeDto;
+using static ProyectoKamil.Dto.EmployeeDto;
 using static ProyectoKamil.Data.EmployeeRepository;
 using ProyectoKamil.Data;
+using ProyectoKamil.Dto;
 
 namespace ProyectoKamil
 {

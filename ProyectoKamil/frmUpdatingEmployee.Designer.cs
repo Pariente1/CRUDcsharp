@@ -73,6 +73,7 @@
             comboBoxWorkCenter.Name = "comboBoxWorkCenter";
             comboBoxWorkCenter.Size = new Size(132, 23);
             comboBoxWorkCenter.TabIndex = 50;
+            comboBoxWorkCenter.SelectedIndexChanged += comboBoxWorkCenter_SelectedIndexChanged;
             // 
             // label_Birthdate
             // 
@@ -155,6 +156,7 @@
             textBoxMotherLastname.Size = new Size(110, 23);
             textBoxMotherLastname.TabIndex = 42;
             textBoxMotherLastname.TextAlign = HorizontalAlignment.Center;
+            textBoxMotherLastname.TextChanged += textBoxMotherLastname_TextChanged;
             // 
             // textBoxFatherLastname
             // 
@@ -175,6 +177,7 @@
             textBoxName.TabIndex = 40;
             textBoxName.TextAlign = HorizontalAlignment.Center;
             textBoxName.UseWaitCursor = true;
+            textBoxName.TextChanged += textBoxName_TextChanged;
             // 
             // frmUpdatingEmployee
             // 
@@ -196,6 +199,7 @@
             Controls.Add(btnGuardar);
             Name = "frmUpdatingEmployee";
             Text = "frmUpdatingEmployee";
+            Load += frmUpdatingEmployee_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -12,7 +12,8 @@ using static ProyectoKamil.RFCGenerator;
 using static ProyectoKamil.Catalogos;
 using ProyectoKamil.Data;
 using static ProyectoKamil.Data.EmployeeRepository;
-using static ProyectoKamil.EmployeeDto;
+using static ProyectoKamil.Dto.EmployeeDto;
+using ProyectoKamil.Dto;
 
 
 namespace ProyectoKamil
