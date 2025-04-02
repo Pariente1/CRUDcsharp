@@ -84,11 +84,11 @@ namespace ProyectoKamil
         private void button_Buscar_Click(object sender, EventArgs e)
         {
             // 1) Recopilar los criterios de búsqueda desde la interfaz
-            string nombre = string.IsNullOrWhiteSpace(textBoxName.Text)
+            string? nombre = string.IsNullOrWhiteSpace(textBoxName.Text)
                             ? null
                             : textBoxName.Text.Trim();
 
-            string rfc = string.IsNullOrWhiteSpace(textBoxSelectRFC.Text)
+            string? rfc = string.IsNullOrWhiteSpace(textBoxSelectRFC.Text)
                          ? null
                          : textBoxSelectRFC.Text.Trim();
 
@@ -109,12 +109,7 @@ namespace ProyectoKamil
             }
 
             // 2) Llamar al repositorio para buscar
-            List<EmployeeDto> listaEmpleados = EmployeeRepository.BuscarEmpleados(
-                nombre,
-                rfc,
-                fechaNac,
-                centroTrabajo
-            );
+            List<EmployeeDto> listaEmpleados = EmployeeRepository.BuscarEmpleados(nombre, "", "", rfc, fechaNac, centroTrabajo, null);
 
             // 3) Procesar el resultado
             if (listaEmpleados.Count == 0)

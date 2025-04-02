@@ -139,5 +139,11 @@ namespace ProyectoKamil
         {
 
         }
+
+        private void Button_UpdateEmployees_Click(object sender, EventArgs e)
+        {
+            frmUpdateEmployee window = new frmUpdateEmployee();
+            window.ShowDialog();
+        }
     }
 }

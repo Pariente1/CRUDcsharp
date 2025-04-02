@@ -39,7 +39,7 @@ namespace ProyectoKamil.Data
         }
 
         // READ con filtros flexibles
-        public static List<EmployeeDto> BuscarEmpleados(string? nombre = null, string? rfc = null, DateTime? fechaNac = null, int? centroTrabajo = null)
+        public static List<EmployeeDto> BuscarEmpleados(string? nombre = null, string? apellidoPaterno = null, string? apellidoMaterno = null, string? rfc = null, DateTime? fechaNac = null, int? centroTrabajo = null, int? puestoTrabajo = null)
         {
             List<EmployeeDto> empleados = new List<EmployeeDto>();
             string query = "SELECT * FROM Empleado WHERE 1=1";
@@ -50,6 +50,18 @@ namespace ProyectoKamil.Data
             {
                 query += " AND Nombre = @Nombre";
                 parametros.Add(new SqlParameter("@Nombre", nombre));
+            }
+
+            if (!string.IsNullOrEmpty(apellidoPaterno))
+            {
+                query += " AND Apellido_Paterno = @apellidoPaterno";
+                parametros.Add(new SqlParameter("@Apellido_Paterno", apellidoPaterno));
+            }
+
+            if (!string.IsNullOrEmpty(apellidoMaterno))
+            {
+                query += " AND Apellido_Materno = @apellidoMaterno";
+                parametros.Add(new SqlParameter("@Apellido_Materno", apellidoPaterno));
             }
 
             if (!string.IsNullOrEmpty(rfc))
@@ -68,6 +80,12 @@ namespace ProyectoKamil.Data
             {
                 query += " AND Centro_Trabajo = @CentroTrabajo";
                 parametros.Add(new SqlParameter("@CentroTrabajo", centroTrabajo.Value));
+            }
+
+            if (puestoTrabajo.HasValue)
+            {
+                query += " AND ID_Puesto = @puestoTrabajo";
+                parametros.Add(new SqlParameter("@puestoTrabajo", puestoTrabajo.Value));
             }
 
             using (SqlConnection conn = new SqlConnection(connectionString))

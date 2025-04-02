@@ -100,6 +100,7 @@
             Button_UpdateEmployees.TabIndex = 4;
             Button_UpdateEmployees.Text = "Modificar";
             Button_UpdateEmployees.UseVisualStyleBackColor = true;
+            Button_UpdateEmployees.Click += Button_UpdateEmployees_Click;
             // 
             // button2
             // 

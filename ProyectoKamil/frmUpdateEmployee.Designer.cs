@@ -148,7 +148,7 @@
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(182, 22);
             btnGuardar.TabIndex = 24;
-            btnGuardar.Text = "Consultar y Modificar";
+            btnGuardar.Text = "Consultar";
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGetAndUpdate_Click;
             // 
@@ -225,6 +225,7 @@
             Controls.Add(textBoxName);
             Name = "frmUpdateEmployee";
             Text = "frmUpdateEmployee";
+            Load += frmUpdateEmployee_Load;
             ResumeLayout(false);
             PerformLayout();
         }

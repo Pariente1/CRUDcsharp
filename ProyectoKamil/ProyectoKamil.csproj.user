@@ -16,6 +16,9 @@
     <Compile Update="frmUpdateWorkCenter.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmUpdatingEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmViewDirectors.cs">
       <SubType>Form</SubType>
     </Compile>
