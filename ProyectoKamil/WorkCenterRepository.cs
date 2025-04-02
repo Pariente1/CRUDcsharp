@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using Microsoft.Data.SqlClient;
+using ProyectoKamil.Dto;
 
 namespace ProyectoKamil.Data
 {
@@ -22,18 +23,28 @@ namespace ProyectoKamil.Data
             return exists;
         }
 
-        public static DataTable GetWorkCenters()
+        public static List<WorkCenterDto> GetWorkCenters()
         {
-            DataTable dt = new DataTable();
-            string query = "SELECT ID_Centro, Nombre_Centro, Ciudad FROM Catalogo_Centros";
+            List<WorkCenterDto> puestos = new List<WorkCenterDto>();
+            string query = "SELECT ID_Centro, Nombre_Centro, Ciudad FROM Catalogo_Centros";            
+            
             using (SqlConnection conn = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
                 conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dt);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        puestos.Add(new WorkCenterDto
+                        {
+                            ID = Convert.ToInt32(reader["ID_Centro"]),
+                            Nombre = reader["Nombre_Centro"].ToString()
+                        });
+                    }
+                }
             }
-            return dt;
+            return puestos;
         }
 
         public static int InsertWorkCenter(string nombreCentro, string ciudad)

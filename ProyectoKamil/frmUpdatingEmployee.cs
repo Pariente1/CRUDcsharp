@@ -1,5 +1,6 @@
 ﻿using ProyectoKamil.Data;
 using ProyectoKamil.Dto;
+using ProyectoKamil.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,8 @@ namespace ProyectoKamil
             InitializeComponent();
             _empleado = empleado;
             _empleadoId = empleado.Id;
+            ComboBoxLoader.CargarCentroTrabajo(comboBoxWorkCenter);
+            ComboBoxLoader.CargarPuestoTrabajo(comboBoxJobPosition);
             CargarDatos();
         }
 

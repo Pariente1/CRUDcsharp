@@ -1,10 +1,12 @@
 ﻿using Microsoft.Data.SqlClient;
+using ProyectoKamil.Dto;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static ProyectoKamil.Dto.JobPositionDto;
 
 namespace ProyectoKamil
 {
@@ -26,18 +28,28 @@ namespace ProyectoKamil
             return exists;
         }
 
-        public static DataTable GetJobPositions()
+        public static List<JobPositionDto> GetJobPositions()
         {
-            DataTable dt = new DataTable();
-            string query = "SELECT ID_Puesto, Nombre_Puesto, Descripcion_Puesto FROM Catalogo_Puestos";
+            List<JobPositionDto> puestos = new List<JobPositionDto>();
+            string query = "SELECT ID_Puesto, Nombre_Puesto FROM Catalogo_Puestos"; 
+
             using (SqlConnection conn = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
                 conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dt);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        puestos.Add(new JobPositionDto
+                        {
+                            ID = Convert.ToInt32(reader["ID_Puesto"]),
+                            Nombre = reader["Nombre_Puesto"].ToString()                            
+                        });
+                    }
+                }
             }
-            return dt;
+            return puestos;
         }
 
         public static int InsertJobPosition(string nombrePuesto, string descripcion)

@@ -86,9 +86,10 @@ namespace ProyectoKamil
                 fechaNac = dateTimePicker.Value.Date;
             }
 
-            // Cargar los ComboBoxes (asumiendo que ya se han asignado en el Load del formulario)
-            DataTable dtWorkCenters = WorkCenterRepository.GetWorkCenters();
-            DataTable dtJobPositions = JobPositionRepository.GetJobPositions();
+            // PALMÓ POR EL CAMBIO A DINAMICO
+
+            //DataTable dtWorkCenters = WorkCenterRepository.GetWorkCenters();
+            //DataTable dtJobPositions = JobPositionRepository.GetJobPositions();
 
             string? rfc = string.IsNullOrWhiteSpace(textBoxSelectRFC.Text)
              ? null
@@ -147,19 +148,21 @@ namespace ProyectoKamil
 
         private void frmUpdateEmployee_Load(object sender, EventArgs e)
         {
-            // Cargar el ComboBox de WorkCenters
-            DataTable dtWorkCenters = WorkCenterRepository.GetWorkCenters();
-            comboBoxWorkCenter.DataSource = dtWorkCenters;
-            comboBoxWorkCenter.DisplayMember = "Nombre_Centro";
-            comboBoxWorkCenter.ValueMember = "ID_Centro";
-            comboBoxWorkCenter.SelectedIndex = -1;  // Ningún elemento seleccionado
+            //PALMÓ POR EL CAMBIO A DINAMICO
 
-            // Cargar el ComboBox de JobPositions
-            DataTable dtJobPositions = JobPositionRepository.GetJobPositions();
-            comboBoxJobPosition.DataSource = dtJobPositions;
-            comboBoxJobPosition.DisplayMember = "Nombre_Puesto";
-            comboBoxJobPosition.ValueMember = "ID_Puesto";
-            comboBoxJobPosition.SelectedIndex = -1;
+            //// Cargar el ComboBox de WorkCenters
+            //DataTable dtWorkCenters = WorkCenterRepository.GetWorkCenters();
+            //comboBoxWorkCenter.DataSource = dtWorkCenters;
+            //comboBoxWorkCenter.DisplayMember = "Nombre_Centro";
+            //comboBoxWorkCenter.ValueMember = "ID_Centro";
+            //comboBoxWorkCenter.SelectedIndex = -1;  // Ningún elemento seleccionado
+
+            //// Cargar el ComboBox de JobPositions
+            //DataTable dtJobPositions = JobPositionRepository.GetJobPositions();
+            //comboBoxJobPosition.DataSource = dtJobPositions;
+            //comboBoxJobPosition.DisplayMember = "Nombre_Puesto";
+            //comboBoxJobPosition.ValueMember = "ID_Puesto";
+            //comboBoxJobPosition.SelectedIndex = -1;
         }
     }
 }
