@@ -44,7 +44,7 @@ namespace ProyectoKamil
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             {
-                EmployeeDto empleado = new EmployeeDto
+                EmployeeDto nuevoEmpleado = new EmployeeDto
                 {
                     Id = _empleadoId,  // Usas el ID que ya tenías almacenado
                     Nombre = textBoxName.Text.Trim(),
@@ -57,7 +57,7 @@ namespace ProyectoKamil
                     Directivo = false  // O el valor que corresponda
                 };
 
-                bool actualizado = EmployeeRepository.UpdateEmpleado(empleado);
+                bool actualizado = EmployeeRepository.UpdateEmpleado(_empleado, nuevoEmpleado);
 
                 if (actualizado)
                     MessageBox.Show("Empleado actualizado correctamente.");

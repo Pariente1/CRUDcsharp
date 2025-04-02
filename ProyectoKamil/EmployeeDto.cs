@@ -14,9 +14,9 @@ namespace ProyectoKamil
         public string ApellidoMaterno { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public string RFC { get; set; }
-        public int CentroTrabajo { get; set; }
-        public int IdPuesto { get; set; }
-        public bool Directivo { get; set; }
+        public int? CentroTrabajo { get; set; }
+        public int? IdPuesto { get; set; }
+        public bool? Directivo { get; set; }
 
     }
         
