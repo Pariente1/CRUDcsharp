@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 namespace ProyectoKamil
 {
     internal class JobPositionRepository
-    {
-         {
+    {         
         private static string connectionString = "Data Source=(localdb)\\local;Initial Catalog=ProyectoKamil;Integrated Security=True;TrustServerCertificate=True";
         public static bool JobPositionExists(string nombrePuesto)
         {

@@ -52,7 +52,7 @@ namespace ProyectoKamil
 
         private void btnGetAndUpdate_Click(object sender, EventArgs e)
         {
-
+            // Recopilar los criterios de busqueda desde la interfaz
             string? nombre = string.IsNullOrWhiteSpace(textBoxName.Text)
                 ? null
                 : textBoxName.Text.Trim();
@@ -76,13 +76,25 @@ namespace ProyectoKamil
             int centroTrabajo = Convert.ToInt32(comboBoxWorkCenter.SelectedValue);
 
             //JonPosition ComboBox
-            DataTable dtJobPosition = WorkCenterRepository.GetWorkCenters();
+            DataTable dtJobPosition = JobPositionRepository.GetJobPositions();
             int puestoTrabajo = Convert.ToInt32(comboBoxJobPosition.SelectedValue);
-
+            
             string? rfc = string.IsNullOrWhiteSpace(textBoxSelectRFC.Text)
              ? null
-             : textBoxSelectRFC.Text.Trim();
+             : textBoxSelectRFC.Text.Trim();                      
 
+
+            if (comboBoxWorkCenter.SelectedValue != null && Convert.ToInt32(comboBoxWorkCenter.SelectedValue) != 0)
+            {
+                centroTrabajo = Convert.ToInt32(comboBoxWorkCenter.SelectedValue);
+            }
+
+            if (comboBoxJobPosition.SelectedValue != null && Convert.ToInt32(comboBoxJobPosition.SelectedValue) != 0)
+            {
+                puestoTrabajo = Convert.ToInt32(comboBoxJobPosition.SelectedValue);
+            }
+
+            //LLamar al repositorio
             List<EmployeeDto> listaEmpleados = EmployeeRepository.BuscarEmpleados(nombre, apellidoPaterno, apellidoMaterno, rfc, fechaNac, centroTrabajo, puestoTrabajo);
 
             // 3) Procesar el resultado
@@ -91,6 +103,8 @@ namespace ProyectoKamil
                 MessageBox.Show("No se encontró ningún empleado con los criterios proporcionados.");
                 return;
             }
+
+
 
             // 4) Construir la cadena con los resultados
             List<string> empleadosInfo = new List<string>();
@@ -108,8 +122,6 @@ namespace ProyectoKamil
             string resultado = string.Join("\n-----------------\n", empleadosInfo);
             MessageBox.Show(resultado, "Empleados encontrados");
 
-
-
             frmUpdatingEmployee window = new frmUpdatingEmployee();
             window.ShowDialog();
         }
@@ -121,7 +133,19 @@ namespace ProyectoKamil
 
         private void frmUpdateEmployee_Load(object sender, EventArgs e)
         {
+            // Cargar el ComboBox de WorkCenters
+            DataTable dtWorkCenters = WorkCenterRepository.GetWorkCenters();
+            comboBoxWorkCenter.DataSource = dtWorkCenters;
+            comboBoxWorkCenter.DisplayMember = "Nombre_Centro";
+            comboBoxWorkCenter.ValueMember = "ID_Centro";
+            comboBoxWorkCenter.SelectedIndex = -1;  // Ningún elemento seleccionado
 
+            // Cargar el ComboBox de JobPositions
+            DataTable dtJobPositions = JobPositionRepository.GetJobPositions();
+            comboBoxJobPosition.DataSource = dtJobPositions;
+            comboBoxJobPosition.DisplayMember = "Nombre_Puesto";
+            comboBoxJobPosition.ValueMember = "ID_Puesto";
+            comboBoxJobPosition.SelectedIndex = -1;
         }
     }
 }

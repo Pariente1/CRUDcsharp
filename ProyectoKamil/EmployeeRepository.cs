@@ -61,7 +61,7 @@ namespace ProyectoKamil.Data
             if (!string.IsNullOrEmpty(apellidoMaterno))
             {
                 query += " AND Apellido_Materno = @apellidoMaterno";
-                parametros.Add(new SqlParameter("@Apellido_Materno", apellidoPaterno));
+                parametros.Add(new SqlParameter("@Apellido_Materno", apellidoMaterno));
             }
 
             if (!string.IsNullOrEmpty(rfc))
