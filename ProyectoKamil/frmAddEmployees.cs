@@ -79,7 +79,7 @@ namespace ProyectoKamil
             DateTime fechaNac = dateTimePicker.Value;
             int idCentro = Catalogos.WorkCenters[selectedWorkCenter];
             int idPuesto = Catalogos.JobPositions[selectedJobPosition];
-            bool isDirectivo = false; // Aun cuando sea 0, si no manejes un checkbox directo
+            bool isDirectivo = false; //Aqui nunca es director, para eso tiene su propio formulario
 
             // 4) Validar la fecha
             if (fechaNac == new DateTime(1900, 1, 1))
@@ -116,8 +116,7 @@ namespace ProyectoKamil
 
                 if (newId > 0)
                 {
-                    MessageBox.Show($"Empleado agregado correctamente. ID generado: {newId}");
-                    // Limpia los campos si quieres
+                    MessageBox.Show($"Empleado agregado correctamente. ID generado: {newId}");                    
                     textBoxName.Clear();
                     textBoxFatherLastname.Clear();
                     textBoxMotherLastname.Clear();

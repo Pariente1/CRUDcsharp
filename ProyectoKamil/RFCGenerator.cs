@@ -37,7 +37,7 @@ namespace ProyectoKamil
                 }
             }
 
-            return rfc + "XXX"; // Puedes generar homoclave real si es necesario más adelante
+            return rfc + "XXX"; 
         }
     }
 }

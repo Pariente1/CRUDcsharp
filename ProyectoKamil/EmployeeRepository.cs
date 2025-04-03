@@ -165,6 +165,14 @@ namespace ProyectoKamil.Data
                 primera = false;
             }
 
+            // Comparar RFC
+            if (!actualizado.RFC.Equals(original.RFC, StringComparison.Ordinal)) 
+            { 
+                if (!primera) queryBuilder.Append(", "); 
+                queryBuilder.Append("RFC = @RFC"); 
+                parametros.Add(new SqlParameter("@RFC", actualizado.RFC)); primera = false; 
+            }
+
             // Comparar Centro de Trabajo (asumiendo que 0 es valor por defecto, y si es null, se envía NULL)
             if (actualizado.CentroTrabajo != original.CentroTrabajo)
             {
