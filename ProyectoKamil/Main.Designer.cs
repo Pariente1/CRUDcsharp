@@ -150,6 +150,7 @@
             Button_DeleteDirectors.TabIndex = 5;
             Button_DeleteDirectors.Text = "Eliminar";
             Button_DeleteDirectors.UseVisualStyleBackColor = true;
+            Button_DeleteDirectors.Click += Button_DeleteDirectors_Click;
             // 
             // Button_UpdateDirectors
             // 

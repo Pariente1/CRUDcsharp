@@ -7,6 +7,9 @@
     <Compile Update="frmAddWorkCenter.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmDeleteDirector.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmUpdateDirector.cs">
       <SubType>Form</SubType>
     </Compile>

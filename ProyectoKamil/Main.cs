@@ -135,5 +135,11 @@ namespace ProyectoKamil
             frmDeleteEmployee window = new frmDeleteEmployee();
             window.ShowDialog();
         }
+
+        private void Button_DeleteDirectors_Click(object sender, EventArgs e)
+        {
+            frmDeleteDirector window = new frmDeleteDirector();
+            window.ShowDialog();
+        }
     }
 }

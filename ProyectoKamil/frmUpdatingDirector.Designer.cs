@@ -155,6 +155,7 @@
             btnGuardar.TabIndex = 52;
             btnGuardar.Text = "Modificar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // radioButton2
             // 
