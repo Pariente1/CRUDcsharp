@@ -7,7 +7,7 @@
     <Compile Update="frmAddWorkCenter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmDeleteDirector.cs">
+    <Compile Update="frmUpdateDirector.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmDeleteEmployee.cs">
@@ -20,6 +20,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmUpdateWorkCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmUpdatingDirector.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmUpdatingEmployee.cs">

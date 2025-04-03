@@ -1,6 +1,6 @@
 ﻿namespace ProyectoKamil
 {
-    partial class frmDeleteDirector
+    partial class frmUpdateDirector
     {
         /// <summary>
         /// Required designer variable.
@@ -55,6 +55,7 @@
             comboBoxJobPosition.Name = "comboBoxJobPosition";
             comboBoxJobPosition.Size = new Size(132, 23);
             comboBoxJobPosition.TabIndex = 64;
+            comboBoxJobPosition.SelectedIndexChanged += comboBoxJobPosition_SelectedIndexChanged;
             // 
             // comboBoxWorkCenter
             // 
@@ -65,6 +66,7 @@
             comboBoxWorkCenter.Name = "comboBoxWorkCenter";
             comboBoxWorkCenter.Size = new Size(132, 23);
             comboBoxWorkCenter.TabIndex = 63;
+            comboBoxWorkCenter.SelectedIndexChanged += comboBoxWorkCenter_SelectedIndexChanged;
             // 
             // label_Birthdate
             // 
@@ -167,6 +169,7 @@
             textBoxName.TabIndex = 53;
             textBoxName.TextAlign = HorizontalAlignment.Center;
             textBoxName.UseWaitCursor = true;
+            textBoxName.TextChanged += textBoxName_TextChanged;
             // 
             // btnGuardar
             // 
@@ -177,6 +180,7 @@
             btnGuardar.TabIndex = 52;
             btnGuardar.Text = "Modificar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // radioButton2
             // 
@@ -188,6 +192,7 @@
             radioButton2.TabStop = true;
             radioButton2.Text = "No";
             radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // radioButton1
             // 
@@ -199,6 +204,7 @@
             radioButton1.TabStop = true;
             radioButton1.Text = "Sí";
             radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // label2
             // 
@@ -209,8 +215,9 @@
             label2.Size = new Size(147, 15);
             label2.TabIndex = 65;
             label2.Text = "Prestación de combustible";
+            label2.Click += label2_Click;
             // 
-            // frmDeleteDirector
+            // frmUpdateDirector
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -231,8 +238,8 @@
             Controls.Add(textBoxFatherLastname);
             Controls.Add(textBoxName);
             Controls.Add(btnGuardar);
-            Name = "frmDeleteDirector";
-            Text = "frmDeleteDirector";
+            Name = "frmUpdateDirector";
+            Text = "Formulario para consultar director";
             ResumeLayout(false);
             PerformLayout();
         }

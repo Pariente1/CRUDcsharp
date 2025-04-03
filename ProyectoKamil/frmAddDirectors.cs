@@ -117,7 +117,7 @@ namespace ProyectoKamil
                             cmd2.Parameters.AddWithValue("@ID_Empleado", newEmpleadoId);
                             // Aquí se usa el mismo centro para Centro_Supervisado; ajústalo si es necesario
                             cmd2.Parameters.AddWithValue("@Centro_Supervisado", idCentro);
-                            cmd2.Parameters.AddWithValue("@FuelAllowance", FuelAllowance ? 1: 0);
+                            cmd2.Parameters.AddWithValue("@FuelAllowance", FuelAllowance ? 1 : 0);
                             cmd2.ExecuteNonQuery();
                         }
 
@@ -144,6 +144,11 @@ namespace ProyectoKamil
         }
 
         private void FuelAllowance_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxFatherLastname_TextChanged(object sender, EventArgs e)
         {
 
         }

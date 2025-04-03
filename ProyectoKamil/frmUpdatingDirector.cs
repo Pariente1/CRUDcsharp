@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoKamil
 {
-    public partial class frmDeleteDirector : Form
+    public partial class frmUpdatingDirector : Form
     {
-        public frmDeleteDirector()
+        public frmUpdatingDirector()
         {
             InitializeComponent();
         }
