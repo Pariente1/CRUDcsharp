@@ -86,16 +86,10 @@ namespace ProyectoKamil
                 fechaNac = dateTimePicker.Value.Date;
             }
 
-            // PALMÓ POR EL CAMBIO A DINAMICO
-
-            //DataTable dtWorkCenters = WorkCenterRepository.GetWorkCenters();
-            //DataTable dtJobPositions = JobPositionRepository.GetJobPositions();
-
             string? rfc = string.IsNullOrWhiteSpace(textBoxSelectRFC.Text)
              ? null
              : textBoxSelectRFC.Text.Trim();
-
-            // Declarar variables como int? para permitir null
+            
             int? centroTrabajo = null;
             if (comboBoxWorkCenter.SelectedValue != null && Convert.ToInt32(comboBoxWorkCenter.SelectedValue) != 0)
             {
@@ -117,22 +111,6 @@ namespace ProyectoKamil
                 MessageBox.Show("No se encontró ningún empleado con los criterios proporcionados.");
                 return;
             }
-
-
-            // 4) (Opcional) Construir la cadena para mostrar resultados en MessageBox
-            List<string> empleadosInfo = new List<string>();
-            foreach (var emp in listaEmpleados)
-            {
-                string info = $"Nombre: {emp.Nombre} {emp.ApellidoPaterno} {emp.ApellidoMaterno}\n" +
-                              $"RFC: {emp.RFC}\n" +
-                              $"Centro Trabajo: {emp.CentroTrabajo}\n" +
-                              $"Puesto: {emp.IdPuesto}\n";
-                empleadosInfo.Add(info);
-            }
-
-
-            string resultado = string.Join("\n-----------------\n", empleadosInfo);
-            MessageBox.Show(resultado, "Empleados encontrados");
 
             // 5) Abrir el formulario de actualización con el primer empleado encontrado
             EmployeeDto empleadoSeleccionado = listaEmpleados[0];
