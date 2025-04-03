@@ -28,7 +28,7 @@ namespace ProyectoKamil
             textBoxName.Text = _empleado.Nombre ?? "";
             textBoxFatherLastname.Text = _empleado.ApellidoPaterno ?? ""; ;
             textBoxMotherLastname.Text = _empleado.ApellidoMaterno ?? ""; ;
-            dateTimePicker.Value = new DateTime(2000, 1, 1);
+            dateTimePicker.Value = new DateTime(1900, 1, 1);
             textBoxSelectRFC.Text = _empleado.RFC;
             //  ComboBoxes:
             comboBoxWorkCenter.SelectedValue = _empleado.CentroTrabajo;

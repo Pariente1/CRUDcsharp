@@ -33,9 +33,7 @@ namespace ProyectoKamil
             textBoxName.Text = _empleado.Nombre ?? "";
             textBoxFatherLastname.Text = _empleado.ApellidoPaterno ?? ""; ;
             textBoxMotherLastname.Text = _empleado.ApellidoMaterno ?? ""; ;
-            dateTimePicker.Value = new DateTime(2000, 1, 1);
-
-            // Si tienes los ComboBoxes llenos, asigna el valor seleccionado:
+            dateTimePicker.Value = new DateTime(1900, 1, 1);            
             comboBoxWorkCenter.SelectedValue = _empleado.CentroTrabajo;
             comboBoxJobPosition.SelectedValue = _empleado.IdPuesto;
         }
@@ -90,6 +88,11 @@ namespace ProyectoKamil
         }
 
         private void frmUpdatingEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
         {
 
         }

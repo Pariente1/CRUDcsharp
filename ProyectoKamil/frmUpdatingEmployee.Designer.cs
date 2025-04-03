@@ -147,6 +147,7 @@
             dateTimePicker.Size = new Size(261, 23);
             dateTimePicker.TabIndex = 43;
             dateTimePicker.Value = new DateTime(1900, 1, 1, 0, 0, 0, 0);
+            dateTimePicker.ValueChanged += dateTimePicker_ValueChanged;
             // 
             // textBoxMotherLastname
             // 
