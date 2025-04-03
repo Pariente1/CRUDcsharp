@@ -40,10 +40,7 @@
             textBoxMotherLastname = new TextBox();
             textBoxFatherLastname = new TextBox();
             textBoxName = new TextBox();
-            btnGuardar = new Button();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
-            label2 = new Label();
+            btnConsultar = new Button();
             SuspendLayout();
             // 
             // comboBoxJobPosition
@@ -171,60 +168,22 @@
             textBoxName.UseWaitCursor = true;
             textBoxName.TextChanged += textBoxName_TextChanged;
             // 
-            // btnGuardar
+            // btnConsultar
             // 
-            btnGuardar.Location = new Point(238, 350);
-            btnGuardar.Margin = new Padding(2, 1, 2, 1);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(182, 22);
-            btnGuardar.TabIndex = 52;
-            btnGuardar.Text = "Modificar";
-            btnGuardar.UseVisualStyleBackColor = true;
-            btnGuardar.Click += btnGuardar_Click;
-            // 
-            // radioButton2
-            // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(395, 278);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(41, 19);
-            radioButton2.TabIndex = 67;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "No";
-            radioButton2.UseVisualStyleBackColor = true;
-            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
-            // 
-            // radioButton1
-            // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(395, 253);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(34, 19);
-            radioButton1.TabIndex = 66;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Sí";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(238, 255);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(147, 15);
-            label2.TabIndex = 65;
-            label2.Text = "Prestación de combustible";
-            label2.Click += label2_Click;
+            btnConsultar.Location = new Point(238, 350);
+            btnConsultar.Margin = new Padding(2, 1, 2, 1);
+            btnConsultar.Name = "btnConsultar";
+            btnConsultar.Size = new Size(182, 22);
+            btnConsultar.TabIndex = 52;
+            btnConsultar.Text = "Consultar";
+            btnConsultar.UseVisualStyleBackColor = true;
+            btnConsultar.Click += btnConsultar_Click;
             // 
             // frmUpdateDirector
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
-            Controls.Add(label2);
             Controls.Add(comboBoxJobPosition);
             Controls.Add(comboBoxWorkCenter);
             Controls.Add(label_Birthdate);
@@ -237,7 +196,7 @@
             Controls.Add(textBoxMotherLastname);
             Controls.Add(textBoxFatherLastname);
             Controls.Add(textBoxName);
-            Controls.Add(btnGuardar);
+            Controls.Add(btnConsultar);
             Name = "frmUpdateDirector";
             Text = "Formulario para consultar director";
             ResumeLayout(false);
@@ -258,9 +217,6 @@
         private TextBox textBoxMotherLastname;
         private TextBox textBoxFatherLastname;
         private TextBox textBoxName;
-        private Button btnGuardar;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private Label label2;
+        private Button btnConsultar;
     }
 }

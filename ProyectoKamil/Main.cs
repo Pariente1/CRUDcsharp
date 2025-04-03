@@ -120,7 +120,8 @@ namespace ProyectoKamil
 
         private void Button_UpdateDirectors_Click(object sender, EventArgs e)
         {
-
+            frmUpdateDirector window = new frmUpdateDirector();
+            window.ShowDialog();
         }
 
         private void Button_UpdateEmployees_Click(object sender, EventArgs e)

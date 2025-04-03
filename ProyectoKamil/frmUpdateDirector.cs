@@ -47,9 +47,11 @@ namespace ProyectoKamil
 
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnConsultar_Click(object sender, EventArgs e)
         {
-
+            frmUpdatingDirector window = new frmUpdatingDirector();
+            window.ShowDialog();
+            
         }
     }
 }
