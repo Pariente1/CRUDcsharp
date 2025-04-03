@@ -126,21 +126,7 @@ namespace ProyectoKamil
 
         private void frmUpdateEmployee_Load(object sender, EventArgs e)
         {
-            //PALMÓ POR EL CAMBIO A DINAMICO
 
-            //// Cargar el ComboBox de WorkCenters
-            //DataTable dtWorkCenters = WorkCenterRepository.GetWorkCenters();
-            //comboBoxWorkCenter.DataSource = dtWorkCenters;
-            //comboBoxWorkCenter.DisplayMember = "Nombre_Centro";
-            //comboBoxWorkCenter.ValueMember = "ID_Centro";
-            //comboBoxWorkCenter.SelectedIndex = -1;  // Ningún elemento seleccionado
-
-            //// Cargar el ComboBox de JobPositions
-            //DataTable dtJobPositions = JobPositionRepository.GetJobPositions();
-            //comboBoxJobPosition.DataSource = dtJobPositions;
-            //comboBoxJobPosition.DisplayMember = "Nombre_Puesto";
-            //comboBoxJobPosition.ValueMember = "ID_Puesto";
-            //comboBoxJobPosition.SelectedIndex = -1;
         }
     }
 }

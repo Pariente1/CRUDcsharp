@@ -33,7 +33,7 @@ namespace ProyectoKamil
             textBoxName.Text = _empleado.Nombre ?? "";
             textBoxFatherLastname.Text = _empleado.ApellidoPaterno ?? ""; ;
             textBoxMotherLastname.Text = _empleado.ApellidoMaterno ?? ""; ;
-            dateTimePicker.Value = new DateTime(1900, 1, 1);            
+            dateTimePicker.Value = _empleado.FechaNacimiento;            
             comboBoxWorkCenter.SelectedValue = _empleado.CentroTrabajo;
             comboBoxJobPosition.SelectedValue = _empleado.IdPuesto;
         }
