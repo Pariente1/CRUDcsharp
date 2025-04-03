@@ -23,7 +23,7 @@ namespace ProyectoKamil.Data
             return exists;
         }
 
-        public static List<WorkCenterDto> GetWorkCenters()
+        public static List<WorkCenterDto> GetWorkCenters(string id, string nombreCentro, string ciudad)
         {
             List<WorkCenterDto> puestos = new List<WorkCenterDto>();
             string query = "SELECT ID_Centro, Nombre_Centro, Ciudad FROM Catalogo_Centros";            
@@ -39,7 +39,8 @@ namespace ProyectoKamil.Data
                         puestos.Add(new WorkCenterDto
                         {
                             ID = Convert.ToInt32(reader["ID_Centro"]),
-                            Nombre = reader["Nombre_Centro"].ToString()
+                            Nombre = reader["Nombre_Centro"].ToString(),
+                            Ciudad = reader["Ciudad"].ToString()
                         });
                     }
                 }

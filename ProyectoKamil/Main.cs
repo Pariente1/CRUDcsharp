@@ -98,7 +98,8 @@ namespace ProyectoKamil
 
         private void frmViewWorkCenter_Click(object sender, EventArgs e)
         {
-
+            frmViewWorkCenter window = new frmViewWorkCenter(); 
+            window.ShowDialog();
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)

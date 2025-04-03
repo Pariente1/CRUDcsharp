@@ -14,11 +14,12 @@ namespace ProyectoKamil.Helpers
         public static void CargarCentroTrabajo(ComboBox combo)
         {
             
-            List<WorkCenterDto> centros = WorkCenterRepository.GetWorkCenters();
+            List<WorkCenterDto> centros = WorkCenterRepository.GetWorkCenters("","","");
 
             combo.DataSource = centros;
             combo.DisplayMember = "Nombre"; 
-            combo.ValueMember = "ID";         
+            combo.ValueMember = "ID";    
+            
         }
 
         
