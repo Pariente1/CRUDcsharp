@@ -90,6 +90,7 @@
             Button_DeleteEmployees.TabIndex = 5;
             Button_DeleteEmployees.Text = "Eliminar";
             Button_DeleteEmployees.UseVisualStyleBackColor = true;
+            Button_DeleteEmployees.Click += Button_DeleteEmployees_Click;
             // 
             // Button_UpdateEmployees
             // 

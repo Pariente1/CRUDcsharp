@@ -1,6 +1,6 @@
 ﻿namespace ProyectoKamil
 {
-    partial class frmDeleteWorkCenter
+    partial class frmDeleteEmployee
     {
         /// <summary>
         /// Required designer variable.
@@ -29,49 +29,66 @@
         private void InitializeComponent()
         {
             button_Delete = new Button();
-            label_DeleteNameCenter = new Label();
             textBox_DeleteCenterName = new TextBox();
+            label_DeleteEmployeeRFC = new Label();
+            textBox_RFC = new TextBox();
+            label_RFC = new Label();
             SuspendLayout();
             // 
             // button_Delete
             // 
-            button_Delete.Location = new Point(339, 213);
+            button_Delete.Location = new Point(371, 247);
             button_Delete.Name = "button_Delete";
             button_Delete.Size = new Size(75, 23);
-            button_Delete.TabIndex = 13;
+            button_Delete.TabIndex = 16;
             button_Delete.Text = "Borrar";
             button_Delete.UseVisualStyleBackColor = true;
             button_Delete.Click += button_Delete_Click;
             // 
-            // label_DeleteNameCenter
-            // 
-            label_DeleteNameCenter.AutoSize = true;
-            label_DeleteNameCenter.Location = new Point(257, 149);
-            label_DeleteNameCenter.Name = "label_DeleteNameCenter";
-            label_DeleteNameCenter.Size = new Size(109, 15);
-            label_DeleteNameCenter.TabIndex = 12;
-            label_DeleteNameCenter.Text = "Nombre del Centro";
-            label_DeleteNameCenter.Click += label_DeleteNameCenter_Click;
-            // 
             // textBox_DeleteCenterName
             // 
-            textBox_DeleteCenterName.Location = new Point(379, 146);
+            textBox_DeleteCenterName.Location = new Point(0, 0);
             textBox_DeleteCenterName.Name = "textBox_DeleteCenterName";
             textBox_DeleteCenterName.Size = new Size(100, 23);
-            textBox_DeleteCenterName.TabIndex = 11;
-            textBox_DeleteCenterName.TextChanged += textBox_DeleteCenterName_TextChanged;
+            textBox_DeleteCenterName.TabIndex = 18;
             // 
-            // frmDeleteWorkCenter
+            // label_DeleteEmployeeRFC
+            // 
+            label_DeleteEmployeeRFC.Location = new Point(0, 0);
+            label_DeleteEmployeeRFC.Name = "label_DeleteEmployeeRFC";
+            label_DeleteEmployeeRFC.Size = new Size(100, 23);
+            label_DeleteEmployeeRFC.TabIndex = 17;
+            // 
+            // textBox_RFC
+            // 
+            textBox_RFC.Location = new Point(371, 158);
+            textBox_RFC.Name = "textBox_RFC";
+            textBox_RFC.Size = new Size(174, 23);
+            textBox_RFC.TabIndex = 19;
+            textBox_RFC.TextChanged += textBox1_TextChanged;
+            // 
+            // label_RFC
+            // 
+            label_RFC.AutoSize = true;
+            label_RFC.Location = new Point(304, 161);
+            label_RFC.Name = "label_RFC";
+            label_RFC.Size = new Size(28, 15);
+            label_RFC.TabIndex = 20;
+            label_RFC.Text = "RFC";
+            label_RFC.Click += label1_Click;
+            // 
+            // frmDeleteEmployee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label_RFC);
+            Controls.Add(textBox_RFC);
             Controls.Add(button_Delete);
-            Controls.Add(label_DeleteNameCenter);
+            Controls.Add(label_DeleteEmployeeRFC);
             Controls.Add(textBox_DeleteCenterName);
-            Name = "frmDeleteWorkCenter";
-            Text = "frmDeleteWorkCenter";
-            Load += frmDeleteWorkCenter_Load;
+            Name = "frmDeleteEmployee";
+            Text = "frmDeleteEmployee";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -79,7 +96,9 @@
         #endregion
 
         private Button button_Delete;
-        private Label label_DeleteNameCenter;
         private TextBox textBox_DeleteCenterName;
+        private Label label_DeleteEmployeeRFC;
+        private TextBox textBox_RFC;
+        private Label label_RFC;
     }
 }

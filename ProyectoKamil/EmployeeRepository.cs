@@ -11,6 +11,21 @@ namespace ProyectoKamil.Data
     {
         private static string connectionString = "Data Source=(localdb)\\local;Initial Catalog=ProyectoKamil;Integrated Security=True;TrustServerCertificate=True";
 
+        public static bool EmployeeExists(string RFC)
+        {
+            bool exists = false;
+            string query = "SELECT COUNT(*) FROM Empleado WHERE RFC = @RFC";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@RFC", RFC);
+                conn.Open();
+                exists = Convert.ToInt32(cmd.ExecuteScalar()) > 0;
+            }
+            return exists;
+        }
+
         // CREATE
         public static int InsertEmpleado(EmployeeDto emp)
         {
@@ -219,14 +234,14 @@ namespace ProyectoKamil.Data
         
 
         // DELETE
-        public static bool DeleteEmpleado(int idEmpleado)
+        public static bool DeleteEmpleado(string RFC)
         {
-            string query = "DELETE FROM Empleado WHERE ID_Empleado = @Id";
+            string query = "DELETE FROM Empleado WHERE RFC = @RFC";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                cmd.Parameters.AddWithValue("@Id", idEmpleado);
+                cmd.Parameters.AddWithValue("@RFC", RFC);
                 conn.Open();
                 return cmd.ExecuteNonQuery() > 0;
             }

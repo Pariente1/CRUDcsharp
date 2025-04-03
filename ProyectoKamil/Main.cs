@@ -98,7 +98,7 @@ namespace ProyectoKamil
 
         private void frmViewWorkCenter_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -126,6 +126,12 @@ namespace ProyectoKamil
         private void Button_UpdateEmployees_Click(object sender, EventArgs e)
         {
             frmUpdateEmployee window = new frmUpdateEmployee();
+            window.ShowDialog();
+        }
+
+        private void Button_DeleteEmployees_Click(object sender, EventArgs e)
+        {
+            frmDeleteEmployee window = new frmDeleteEmployee();
             window.ShowDialog();
         }
     }

@@ -58,6 +58,11 @@ namespace ProyectoKamil
                 MessageBox.Show(resultado, "Cambio exitoso");
             }
 
-            }
+        }
+
+        private void label_DeleteNameCenter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
