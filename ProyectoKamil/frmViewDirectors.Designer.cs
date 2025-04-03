@@ -40,20 +40,20 @@
             ((System.ComponentModel.ISupportInitialize)selectWorkCenter).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnBuscar
             // 
-            btnBuscar.Location = new Point(252, 215);
+            btnBuscar.Location = new Point(292, 272);
             btnBuscar.Margin = new Padding(2, 1, 2, 1);
+            btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(81, 22);
             btnBuscar.TabIndex = 18;
-            btnBuscar.Name = "btnBuscar";
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
             btnBuscar.Click += btnBuscar_Click;
             // 
             // selectWorkCenter
             // 
-            selectWorkCenter.Location = new Point(292, 128);
+            selectWorkCenter.Location = new Point(349, 141);
             selectWorkCenter.Margin = new Padding(2, 1, 2, 1);
             selectWorkCenter.Maximum = new decimal(new int[] { 2, 0, 0, 0 });
             selectWorkCenter.Name = "selectWorkCenter";
@@ -62,7 +62,7 @@
             // 
             // textBoxSelectRFC
             // 
-            textBoxSelectRFC.Location = new Point(292, 107);
+            textBoxSelectRFC.Location = new Point(349, 120);
             textBoxSelectRFC.Margin = new Padding(2, 1, 2, 1);
             textBoxSelectRFC.Name = "textBoxSelectRFC";
             textBoxSelectRFC.Size = new Size(110, 23);
@@ -70,7 +70,7 @@
             // 
             // textBoxName
             // 
-            textBoxName.Location = new Point(292, 84);
+            textBoxName.Location = new Point(349, 97);
             textBoxName.Margin = new Padding(2, 1, 2, 1);
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(110, 23);
@@ -78,7 +78,7 @@
             // 
             // dateTimePickerBirthDay
             // 
-            dateTimePickerBirthDay.Location = new Point(292, 150);
+            dateTimePickerBirthDay.Location = new Point(349, 163);
             dateTimePickerBirthDay.Margin = new Padding(2, 1, 2, 1);
             dateTimePickerBirthDay.Name = "dateTimePickerBirthDay";
             dateTimePickerBirthDay.Size = new Size(217, 23);
@@ -88,7 +88,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(123, 150);
+            label4.Location = new Point(180, 163);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new Size(119, 15);
@@ -98,7 +98,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(123, 130);
+            label3.Location = new Point(180, 143);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(101, 15);
@@ -108,7 +108,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(123, 109);
+            label2.Location = new Point(180, 122);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(28, 15);
@@ -118,7 +118,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(123, 85);
+            label1.Location = new Point(180, 98);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(51, 15);
@@ -129,7 +129,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(632, 342);
+            ClientSize = new Size(684, 361);
             Controls.Add(btnBuscar);
             Controls.Add(selectWorkCenter);
             Controls.Add(textBoxSelectRFC);

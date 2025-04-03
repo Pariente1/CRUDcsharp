@@ -18,6 +18,11 @@ namespace ProyectoKamil
         public frmUpdateDirector()
         {
             InitializeComponent();
+            this.Size = new Size(700, 400);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             CargarDatos();
         }
 
@@ -27,7 +32,7 @@ namespace ProyectoKamil
             textBoxName.Text = _empleado.Nombre ?? "";
             textBoxFatherLastname.Text = _empleado.ApellidoPaterno ?? ""; ;
             textBoxMotherLastname.Text = _empleado.ApellidoMaterno ?? ""; ;
-            dateTimePicker.Value = new DateTime(1900, 1, 1);            
+            dateTimePicker.Value = new DateTime(1900, 1, 1);
             //  ComboBoxes:
             comboBoxWorkCenter.SelectedValue = _empleado.CentroTrabajo;
             comboBoxJobPosition.SelectedValue = _empleado.IdPuesto;
@@ -97,7 +102,7 @@ namespace ProyectoKamil
             }
 
             //LLamar al repositorio
-            List<EmployeeDto> listaEmpleados = EmployeeRepository.BuscarEmpleados(nombre, apellidoPaterno, apellidoMaterno,"", fechaNac, centroTrabajo, puestoTrabajo);
+            List<EmployeeDto> listaEmpleados = EmployeeRepository.BuscarEmpleados(nombre, apellidoPaterno, apellidoMaterno, "", fechaNac, centroTrabajo, puestoTrabajo);
 
             // 3) Procesar el resultado
             if (listaEmpleados.Count == 0)
@@ -110,7 +115,12 @@ namespace ProyectoKamil
             EmployeeDto empleadoSeleccionado = listaEmpleados[0];
 
             frmUpdatingDirector window = new frmUpdatingDirector(empleadoSeleccionado);
-            window.ShowDialog();            
+            window.ShowDialog();
+        }
+
+        private void frmUpdateDirector_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

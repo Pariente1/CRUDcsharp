@@ -44,7 +44,7 @@ namespace ProyectoKamil
                 string info = $"ID: {emp.ID}\n" +
                               $"Nombre_Centro: {emp.Nombre}\n" +
                               $"Ciudad: {emp.Ciudad}\n";
-                              
+
                 centrosInfo.Add(info);
             }
 
@@ -58,6 +58,11 @@ namespace ProyectoKamil
 
 
         private void textBox_CityName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmViewWorkCenter_Load(object sender, EventArgs e)
         {
 
         }

@@ -35,7 +35,7 @@
             // 
             // button_Consultar
             // 
-            button_Consultar.Location = new Point(352, 255);
+            button_Consultar.Location = new Point(282, 206);
             button_Consultar.Margin = new Padding(2, 1, 2, 1);
             button_Consultar.Name = "button_Consultar";
             button_Consultar.Size = new Size(81, 22);
@@ -46,7 +46,7 @@
             // 
             // textBox_CityName
             // 
-            textBox_CityName.Location = new Point(430, 214);
+            textBox_CityName.Location = new Point(364, 116);
             textBox_CityName.Margin = new Padding(2, 1, 2, 1);
             textBox_CityName.Name = "textBox_CityName";
             textBox_CityName.Size = new Size(110, 23);
@@ -56,7 +56,7 @@
             // label_NombreCiudad
             // 
             label_NombreCiudad.AutoSize = true;
-            label_NombreCiudad.Location = new Point(261, 215);
+            label_NombreCiudad.Location = new Point(195, 117);
             label_NombreCiudad.Margin = new Padding(2, 0, 2, 0);
             label_NombreCiudad.Name = "label_NombreCiudad";
             label_NombreCiudad.Size = new Size(120, 15);
@@ -67,12 +67,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(684, 361);
             Controls.Add(textBox_CityName);
             Controls.Add(label_NombreCiudad);
             Controls.Add(button_Consultar);
             Name = "frmViewWorkCenter";
             Text = "frmViewWorkCenter";
+            Load += frmViewWorkCenter_Load;
             ResumeLayout(false);
             PerformLayout();
         }

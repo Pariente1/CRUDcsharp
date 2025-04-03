@@ -38,7 +38,7 @@
             // label_Name
             // 
             label_Name.AutoSize = true;
-            label_Name.Location = new Point(174, 79);
+            label_Name.Location = new Point(167, 122);
             label_Name.Margin = new Padding(2, 0, 2, 0);
             label_Name.Name = "label_Name";
             label_Name.RightToLeft = RightToLeft.Yes;
@@ -50,7 +50,7 @@
             // label_FatherLastname
             // 
             label_FatherLastname.AutoSize = true;
-            label_FatherLastname.Location = new Point(174, 106);
+            label_FatherLastname.Location = new Point(167, 149);
             label_FatherLastname.Margin = new Padding(2, 0, 2, 0);
             label_FatherLastname.Name = "label_FatherLastname";
             label_FatherLastname.RightToLeft = RightToLeft.Yes;
@@ -60,7 +60,7 @@
             // 
             // textBoxCity
             // 
-            textBoxCity.Location = new Point(331, 103);
+            textBoxCity.Location = new Point(324, 146);
             textBoxCity.Margin = new Padding(2, 1, 2, 1);
             textBoxCity.Name = "textBoxCity";
             textBoxCity.Size = new Size(110, 23);
@@ -71,7 +71,7 @@
             // 
             // textBoxName
             // 
-            textBoxName.Location = new Point(331, 76);
+            textBoxName.Location = new Point(324, 119);
             textBoxName.Margin = new Padding(2, 1, 2, 1);
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(110, 23);
@@ -82,7 +82,7 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(266, 165);
+            btnGuardar.Location = new Point(259, 208);
             btnGuardar.Margin = new Padding(2, 1, 2, 1);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(81, 22);

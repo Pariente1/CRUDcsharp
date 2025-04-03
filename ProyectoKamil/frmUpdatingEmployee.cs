@@ -22,6 +22,11 @@ namespace ProyectoKamil
         public frmUpdatingEmployee(EmployeeDto empleado)
         {
             InitializeComponent();
+            this.Size = new Size(700, 400);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             _empleado = empleado;
             _empleadoId = empleado.Id;
             ComboBoxLoader.CargarCentroTrabajo(comboBoxWorkCenter);

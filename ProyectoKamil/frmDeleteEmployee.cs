@@ -16,6 +16,11 @@ namespace ProyectoKamil
         public frmDeleteEmployee()
         {
             InitializeComponent();
+            this.Size = new Size(700, 400);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
         private void button_Delete_Click(object sender, EventArgs e)
@@ -54,6 +59,11 @@ namespace ProyectoKamil
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmDeleteEmployee_Load(object sender, EventArgs e)
         {
 
         }

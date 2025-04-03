@@ -35,7 +35,7 @@
             // 
             // button_Delete
             // 
-            button_Delete.Location = new Point(339, 213);
+            button_Delete.Location = new Point(279, 210);
             button_Delete.Name = "button_Delete";
             button_Delete.Size = new Size(75, 23);
             button_Delete.TabIndex = 13;
@@ -46,7 +46,7 @@
             // label_DeleteNameCenter
             // 
             label_DeleteNameCenter.AutoSize = true;
-            label_DeleteNameCenter.Location = new Point(257, 149);
+            label_DeleteNameCenter.Location = new Point(197, 146);
             label_DeleteNameCenter.Name = "label_DeleteNameCenter";
             label_DeleteNameCenter.Size = new Size(109, 15);
             label_DeleteNameCenter.TabIndex = 12;
@@ -55,7 +55,7 @@
             // 
             // textBox_DeleteCenterName
             // 
-            textBox_DeleteCenterName.Location = new Point(379, 146);
+            textBox_DeleteCenterName.Location = new Point(319, 143);
             textBox_DeleteCenterName.Name = "textBox_DeleteCenterName";
             textBox_DeleteCenterName.Size = new Size(100, 23);
             textBox_DeleteCenterName.TabIndex = 11;
@@ -65,7 +65,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(684, 361);
             Controls.Add(button_Delete);
             Controls.Add(label_DeleteNameCenter);
             Controls.Add(textBox_DeleteCenterName);

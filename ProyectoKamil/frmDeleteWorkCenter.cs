@@ -17,6 +17,11 @@ namespace ProyectoKamil
         public frmDeleteWorkCenter()
         {
             InitializeComponent();
+            this.Size = new Size(700, 400);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
         private void frmDeleteWorkCenter_Load(object sender, EventArgs e)

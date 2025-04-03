@@ -17,6 +17,11 @@ namespace ProyectoKamil
         public frmUpdateWorkCenter()
         {
             InitializeComponent();
+            this.Size = new Size(700, 400);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
         private void textBox_CenterName_TextChanged(object sender, EventArgs e)
@@ -62,7 +67,8 @@ namespace ProyectoKamil
             }
 
             bool exists = WorkCenterRepository.WorkCenterExists(nameCenter);
-            if (!exists) {
+            if (!exists)
+            {
                 MessageBox.Show("El centro no existe.");
                 return;
             }
@@ -70,9 +76,9 @@ namespace ProyectoKamil
             if (string.IsNullOrEmpty(newNameCenter))
             {
                 newNameCenter = nameCenter;
-            }                     
+            }
 
-            bool updated= WorkCenterRepository.UpdateWorkCenter(nameCenter, newNameCenter, nameCity);
+            bool updated = WorkCenterRepository.UpdateWorkCenter(nameCenter, newNameCenter, nameCity);
             if (updated)
             {
                 string resultado = $"Se cambió el nombre del centro: {nameCenter}\nPor: {newNameCenter}\n" +
@@ -84,6 +90,11 @@ namespace ProyectoKamil
                 MessageBox.Show("No se pudo actualizar el centro.");
             }
 
+
+        }
+
+        private void frmUpdateWorkCenter_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -57,7 +57,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label1.Location = new Point(222, 51);
+            label1.Location = new Point(251, 63);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(159, 15);
@@ -71,7 +71,7 @@
             groupBox1.Controls.Add(Button_UpdateEmployees);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(addWorker);
-            groupBox1.Location = new Point(11, 95);
+            groupBox1.Location = new Point(40, 107);
             groupBox1.Margin = new Padding(2, 1, 2, 1);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(2, 1, 2, 1);
@@ -131,7 +131,7 @@
             groupBox2.Controls.Add(Button_UpdateDirectors);
             groupBox2.Controls.Add(button4);
             groupBox2.Controls.Add(button3);
-            groupBox2.Location = new Point(214, 95);
+            groupBox2.Location = new Point(243, 107);
             groupBox2.Margin = new Padding(2, 1, 2, 1);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(2, 1, 2, 1);
@@ -191,7 +191,7 @@
             groupBox3.Controls.Add(Button_UpdateWorkCenter);
             groupBox3.Controls.Add(button6);
             groupBox3.Controls.Add(button5);
-            groupBox3.Location = new Point(425, 95);
+            groupBox3.Location = new Point(454, 107);
             groupBox3.Margin = new Padding(2, 1, 2, 1);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(2, 1, 2, 1);
@@ -266,7 +266,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(3, 1, 0, 1);
-            menuStrip1.Size = new Size(632, 24);
+            menuStrip1.Size = new Size(684, 24);
             menuStrip1.TabIndex = 7;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
@@ -275,7 +275,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(632, 342);
+            ClientSize = new Size(684, 361);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);

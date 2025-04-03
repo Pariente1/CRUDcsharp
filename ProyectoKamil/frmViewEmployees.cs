@@ -20,7 +20,7 @@ namespace ProyectoKamil
         public frmViewEmployees()
         {
             InitializeComponent();
-            this.Size = new Size(1200, 800);
+            this.Size = new Size(700, 400);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;

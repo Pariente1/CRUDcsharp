@@ -16,6 +16,11 @@ namespace ProyectoKamil
         public frmDeleteDirector()
         {
             InitializeComponent();
+            this.Size = new Size(700, 400);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
         private void label_RFC_Click(object sender, EventArgs e)
@@ -54,6 +59,11 @@ namespace ProyectoKamil
         }
 
         private void textBox_RFC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmDeleteDirector_Load(object sender, EventArgs e)
         {
 
         }

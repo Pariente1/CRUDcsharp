@@ -48,7 +48,7 @@
             // 
             comboBoxWorkCenter.FormattingEnabled = true;
             comboBoxWorkCenter.Items.AddRange(new object[] { "Centro Culiacan", "Centro Guasave", "Centro Navolato" });
-            comboBoxWorkCenter.Location = new Point(361, 180);
+            comboBoxWorkCenter.Location = new Point(303, 163);
             comboBoxWorkCenter.Margin = new Padding(2, 1, 2, 1);
             comboBoxWorkCenter.Name = "comboBoxWorkCenter";
             comboBoxWorkCenter.Size = new Size(132, 23);
@@ -57,7 +57,7 @@
             // label_Birthdate
             // 
             label_Birthdate.AutoSize = true;
-            label_Birthdate.Location = new Point(204, 155);
+            label_Birthdate.Location = new Point(146, 138);
             label_Birthdate.Margin = new Padding(2, 0, 2, 0);
             label_Birthdate.Name = "label_Birthdate";
             label_Birthdate.RightToLeft = RightToLeft.Yes;
@@ -68,7 +68,7 @@
             // label_Name
             // 
             label_Name.AutoSize = true;
-            label_Name.Location = new Point(204, 74);
+            label_Name.Location = new Point(146, 57);
             label_Name.Margin = new Padding(2, 0, 2, 0);
             label_Name.Name = "label_Name";
             label_Name.RightToLeft = RightToLeft.Yes;
@@ -79,7 +79,7 @@
             // label_MotherLastname
             // 
             label_MotherLastname.AutoSize = true;
-            label_MotherLastname.Location = new Point(204, 126);
+            label_MotherLastname.Location = new Point(146, 109);
             label_MotherLastname.Margin = new Padding(2, 0, 2, 0);
             label_MotherLastname.Name = "label_MotherLastname";
             label_MotherLastname.RightToLeft = RightToLeft.Yes;
@@ -90,7 +90,7 @@
             // label_FatherLastname
             // 
             label_FatherLastname.AutoSize = true;
-            label_FatherLastname.Location = new Point(204, 101);
+            label_FatherLastname.Location = new Point(146, 84);
             label_FatherLastname.Margin = new Padding(2, 0, 2, 0);
             label_FatherLastname.Name = "label_FatherLastname";
             label_FatherLastname.RightToLeft = RightToLeft.Yes;
@@ -101,7 +101,7 @@
             // label_WorkCenter
             // 
             label_WorkCenter.AutoSize = true;
-            label_WorkCenter.Location = new Point(204, 181);
+            label_WorkCenter.Location = new Point(146, 164);
             label_WorkCenter.Margin = new Padding(2, 0, 2, 0);
             label_WorkCenter.Name = "label_WorkCenter";
             label_WorkCenter.Size = new Size(101, 15);
@@ -110,7 +110,7 @@
             // 
             // dateTimePicker
             // 
-            dateTimePicker.Location = new Point(361, 153);
+            dateTimePicker.Location = new Point(303, 136);
             dateTimePicker.Margin = new Padding(2, 1, 2, 1);
             dateTimePicker.Name = "dateTimePicker";
             dateTimePicker.Size = new Size(261, 23);
@@ -119,7 +119,7 @@
             // 
             // textBoxMotherLastname
             // 
-            textBoxMotherLastname.Location = new Point(361, 125);
+            textBoxMotherLastname.Location = new Point(303, 108);
             textBoxMotherLastname.Margin = new Padding(2, 1, 2, 1);
             textBoxMotherLastname.Name = "textBoxMotherLastname";
             textBoxMotherLastname.Size = new Size(110, 23);
@@ -128,7 +128,7 @@
             // 
             // textBoxFatherLastname
             // 
-            textBoxFatherLastname.Location = new Point(361, 100);
+            textBoxFatherLastname.Location = new Point(303, 83);
             textBoxFatherLastname.Margin = new Padding(2, 1, 2, 1);
             textBoxFatherLastname.Name = "textBoxFatherLastname";
             textBoxFatherLastname.Size = new Size(110, 23);
@@ -138,7 +138,7 @@
             // 
             // textBoxName
             // 
-            textBoxName.Location = new Point(361, 72);
+            textBoxName.Location = new Point(303, 55);
             textBoxName.Margin = new Padding(2, 1, 2, 1);
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(110, 23);
@@ -148,7 +148,7 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(252, 310);
+            btnGuardar.Location = new Point(215, 293);
             btnGuardar.Margin = new Padding(2, 1, 2, 1);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(182, 22);
@@ -160,7 +160,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(361, 235);
+            radioButton2.Location = new Point(303, 218);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(41, 19);
             radioButton2.TabIndex = 67;
@@ -171,7 +171,7 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(361, 210);
+            radioButton1.Location = new Point(303, 193);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(34, 19);
             radioButton1.TabIndex = 66;
@@ -182,7 +182,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(204, 212);
+            label2.Location = new Point(146, 195);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(147, 15);
@@ -193,7 +193,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(684, 361);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Controls.Add(label2);
@@ -210,6 +210,7 @@
             Controls.Add(btnGuardar);
             Name = "frmUpdatingDirector";
             Text = "Formulario para Actualizar Director";
+            Load += frmUpdatingDirector_Load;
             ResumeLayout(false);
             PerformLayout();
         }

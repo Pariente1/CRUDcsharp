@@ -43,7 +43,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(67, 81);
+            label1.Location = new Point(163, 98);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(51, 15);
@@ -54,7 +54,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(67, 105);
+            label2.Location = new Point(163, 122);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(28, 15);
@@ -65,7 +65,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(67, 126);
+            label3.Location = new Point(163, 143);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(101, 15);
@@ -76,7 +76,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(67, 146);
+            label4.Location = new Point(163, 163);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new Size(119, 15);
@@ -86,7 +86,7 @@
             // 
             // dateTimePickerBirthDay
             // 
-            dateTimePickerBirthDay.Location = new Point(236, 146);
+            dateTimePickerBirthDay.Location = new Point(332, 163);
             dateTimePickerBirthDay.Margin = new Padding(2, 1, 2, 1);
             dateTimePickerBirthDay.Name = "dateTimePickerBirthDay";
             dateTimePickerBirthDay.Size = new Size(217, 23);
@@ -96,7 +96,7 @@
             // 
             // textBoxName
             // 
-            textBoxName.Location = new Point(236, 80);
+            textBoxName.Location = new Point(332, 97);
             textBoxName.Margin = new Padding(2, 1, 2, 1);
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(110, 23);
@@ -105,7 +105,7 @@
             // 
             // textBoxSelectRFC
             // 
-            textBoxSelectRFC.Location = new Point(236, 103);
+            textBoxSelectRFC.Location = new Point(332, 120);
             textBoxSelectRFC.Margin = new Padding(2, 1, 2, 1);
             textBoxSelectRFC.Name = "textBoxSelectRFC";
             textBoxSelectRFC.Size = new Size(110, 23);
@@ -114,7 +114,7 @@
             // 
             // selectWorkCenter
             // 
-            selectWorkCenter.Location = new Point(236, 124);
+            selectWorkCenter.Location = new Point(332, 141);
             selectWorkCenter.Margin = new Padding(2, 1, 2, 1);
             selectWorkCenter.Maximum = new decimal(new int[] { 2, 0, 0, 0 });
             selectWorkCenter.Name = "selectWorkCenter";
@@ -124,7 +124,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(268, 232);
+            button1.Location = new Point(292, 288);
             button1.Margin = new Padding(2, 1, 2, 1);
             button1.Name = "button1";
             button1.Size = new Size(81, 22);
@@ -137,7 +137,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(632, 342);
+            ClientSize = new Size(684, 361);
             Controls.Add(button1);
             Controls.Add(selectWorkCenter);
             Controls.Add(textBoxSelectRFC);

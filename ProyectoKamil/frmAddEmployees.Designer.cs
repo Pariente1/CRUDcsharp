@@ -45,9 +45,10 @@
             // 
             // textBoxName
             // 
-            textBoxName.Location = new Point(433, 84);
+            textBoxName.Location = new Point(288, 63);
+            textBoxName.Margin = new Padding(2, 1, 2, 1);
             textBoxName.Name = "textBoxName";
-            textBoxName.Size = new Size(200, 39);
+            textBoxName.Size = new Size(110, 23);
             textBoxName.TabIndex = 1;
             textBoxName.TextAlign = HorizontalAlignment.Center;
             textBoxName.UseWaitCursor = true;
@@ -55,9 +56,10 @@
             // 
             // textBoxFatherLastname
             // 
-            textBoxFatherLastname.Location = new Point(433, 142);
+            textBoxFatherLastname.Location = new Point(288, 91);
+            textBoxFatherLastname.Margin = new Padding(2, 1, 2, 1);
             textBoxFatherLastname.Name = "textBoxFatherLastname";
-            textBoxFatherLastname.Size = new Size(200, 39);
+            textBoxFatherLastname.Size = new Size(110, 23);
             textBoxFatherLastname.TabIndex = 2;
             textBoxFatherLastname.TextAlign = HorizontalAlignment.Center;
             textBoxFatherLastname.UseWaitCursor = true;
@@ -65,18 +67,20 @@
             // 
             // textBoxMotherLastname
             // 
-            textBoxMotherLastname.Location = new Point(433, 196);
+            textBoxMotherLastname.Location = new Point(288, 116);
+            textBoxMotherLastname.Margin = new Padding(2, 1, 2, 1);
             textBoxMotherLastname.Name = "textBoxMotherLastname";
-            textBoxMotherLastname.Size = new Size(200, 39);
+            textBoxMotherLastname.Size = new Size(110, 23);
             textBoxMotherLastname.TabIndex = 3;
             textBoxMotherLastname.TextAlign = HorizontalAlignment.Center;
             textBoxMotherLastname.TextChanged += textBoxMotherLastname_TextChanged;
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(515, 567);
+            btnGuardar.Location = new Point(332, 290);
+            btnGuardar.Margin = new Padding(2, 1, 2, 1);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(150, 46);
+            btnGuardar.Size = new Size(81, 22);
             btnGuardar.TabIndex = 5;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
@@ -84,9 +88,10 @@
             // 
             // dateTimePicker
             // 
-            dateTimePicker.Location = new Point(433, 256);
+            dateTimePicker.Location = new Point(288, 144);
+            dateTimePicker.Margin = new Padding(2, 1, 2, 1);
             dateTimePicker.Name = "dateTimePicker";
-            dateTimePicker.Size = new Size(482, 39);
+            dateTimePicker.Size = new Size(261, 23);
             dateTimePicker.TabIndex = 6;
             dateTimePicker.Value = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dateTimePicker.ValueChanged += dateTimePicker1_ValueChanged;
@@ -94,18 +99,20 @@
             // label_WorkCenter
             // 
             label_WorkCenter.AutoSize = true;
-            label_WorkCenter.Location = new Point(141, 316);
+            label_WorkCenter.Location = new Point(131, 172);
+            label_WorkCenter.Margin = new Padding(2, 0, 2, 0);
             label_WorkCenter.Name = "label_WorkCenter";
-            label_WorkCenter.Size = new Size(204, 32);
+            label_WorkCenter.Size = new Size(101, 15);
             label_WorkCenter.TabIndex = 9;
             label_WorkCenter.Text = "Centro de Trabajo";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(141, 376);
+            label1.Location = new Point(131, 200);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(204, 32);
+            label1.Size = new Size(101, 15);
             label1.TabIndex = 11;
             label1.Text = "Puesto de Trabajo";
             label1.Click += label1_Click;
@@ -113,68 +120,74 @@
             // label_FatherLastname
             // 
             label_FatherLastname.AutoSize = true;
-            label_FatherLastname.Location = new Point(141, 145);
+            label_FatherLastname.Location = new Point(131, 92);
+            label_FatherLastname.Margin = new Padding(2, 0, 2, 0);
             label_FatherLastname.Name = "label_FatherLastname";
             label_FatherLastname.RightToLeft = RightToLeft.Yes;
-            label_FatherLastname.Size = new Size(190, 32);
+            label_FatherLastname.Size = new Size(95, 15);
             label_FatherLastname.TabIndex = 15;
             label_FatherLastname.Text = "Apellido Paterno";
             // 
             // label_MotherLastname
             // 
             label_MotherLastname.AutoSize = true;
-            label_MotherLastname.Location = new Point(141, 199);
+            label_MotherLastname.Location = new Point(131, 117);
+            label_MotherLastname.Margin = new Padding(2, 0, 2, 0);
             label_MotherLastname.Name = "label_MotherLastname";
             label_MotherLastname.RightToLeft = RightToLeft.Yes;
-            label_MotherLastname.Size = new Size(200, 32);
+            label_MotherLastname.Size = new Size(99, 15);
             label_MotherLastname.TabIndex = 16;
             label_MotherLastname.Text = "Apellido Materno";
             // 
             // label_Name
             // 
             label_Name.AutoSize = true;
-            label_Name.Location = new Point(141, 87);
+            label_Name.Location = new Point(131, 65);
+            label_Name.Margin = new Padding(2, 0, 2, 0);
             label_Name.Name = "label_Name";
             label_Name.RightToLeft = RightToLeft.Yes;
-            label_Name.Size = new Size(102, 32);
+            label_Name.Size = new Size(51, 15);
             label_Name.TabIndex = 17;
             label_Name.Text = "Nombre";
             // 
             // label_Birthdate
             // 
             label_Birthdate.AutoSize = true;
-            label_Birthdate.Location = new Point(141, 261);
+            label_Birthdate.Location = new Point(131, 146);
+            label_Birthdate.Margin = new Padding(2, 0, 2, 0);
             label_Birthdate.Name = "label_Birthdate";
             label_Birthdate.RightToLeft = RightToLeft.Yes;
-            label_Birthdate.Size = new Size(240, 32);
+            label_Birthdate.Size = new Size(119, 15);
             label_Birthdate.TabIndex = 18;
             label_Birthdate.Text = "Fecha de Nacimiento";
             // 
-            // comboBox1
+            // comboBoxWorkCenter
             // 
             comboBoxWorkCenter.FormattingEnabled = true;
             comboBoxWorkCenter.Items.AddRange(new object[] { "Centro Culiacan", "Centro Guasave", "Centro Navolato" });
-            comboBoxWorkCenter.Location = new Point(433, 313);
+            comboBoxWorkCenter.Location = new Point(288, 171);
+            comboBoxWorkCenter.Margin = new Padding(2, 1, 2, 1);
             comboBoxWorkCenter.Name = "comboBoxWorkCenter";
-            comboBoxWorkCenter.Size = new Size(242, 40);
+            comboBoxWorkCenter.Size = new Size(132, 23);
             comboBoxWorkCenter.TabIndex = 19;
             comboBoxWorkCenter.SelectedIndexChanged += comboBoxWorkCenter_SelectedIndexChanged;
             // 
             // comboBoxJobPosition
             // 
             comboBoxJobPosition.FormattingEnabled = true;
-            comboBoxJobPosition.Items.AddRange(new object[] { "Vendedor ", "Cajero"});
-            comboBoxJobPosition.Location = new Point(433, 373);
+            comboBoxJobPosition.Items.AddRange(new object[] { "Vendedor ", "Cajero" });
+            comboBoxJobPosition.Location = new Point(288, 199);
+            comboBoxJobPosition.Margin = new Padding(2, 1, 2, 1);
             comboBoxJobPosition.Name = "comboBoxJobPosition";
-            comboBoxJobPosition.Size = new Size(242, 40);
+            comboBoxJobPosition.Size = new Size(132, 23);
             comboBoxJobPosition.TabIndex = 20;
             comboBoxJobPosition.SelectedIndexChanged += comboBoxJobPosition_SelectedIndexChanged;
             // 
             // frmAddEmployees
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1174, 729);
+            ClientSize = new Size(684, 361);
             Controls.Add(comboBoxJobPosition);
             Controls.Add(comboBoxWorkCenter);
             Controls.Add(label_Birthdate);
@@ -188,6 +201,7 @@
             Controls.Add(textBoxMotherLastname);
             Controls.Add(textBoxFatherLastname);
             Controls.Add(textBoxName);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "frmAddEmployees";
             Text = "Agregar Empleado - Proyecto Kamil";
             Load += frmAddWorker_Load;

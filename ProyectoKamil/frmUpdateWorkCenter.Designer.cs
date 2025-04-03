@@ -39,7 +39,7 @@
             // 
             // textBox_NewCenterName
             // 
-            textBox_NewCenterName.Location = new Point(405, 147);
+            textBox_NewCenterName.Location = new Point(334, 90);
             textBox_NewCenterName.Name = "textBox_NewCenterName";
             textBox_NewCenterName.Size = new Size(100, 23);
             textBox_NewCenterName.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // textBox_CenterName
             // 
-            textBox_CenterName.Location = new Point(262, 147);
+            textBox_CenterName.Location = new Point(191, 90);
             textBox_CenterName.Name = "textBox_CenterName";
             textBox_CenterName.Size = new Size(100, 23);
             textBox_CenterName.TabIndex = 1;
@@ -56,7 +56,7 @@
             // Nombre
             // 
             Nombre.AutoSize = true;
-            Nombre.Location = new Point(140, 150);
+            Nombre.Location = new Point(69, 93);
             Nombre.Name = "Nombre";
             Nombre.Size = new Size(109, 15);
             Nombre.TabIndex = 4;
@@ -66,7 +66,7 @@
             // label_NewCenterName
             // 
             label_NewCenterName.AutoSize = true;
-            label_NewCenterName.Location = new Point(511, 150);
+            label_NewCenterName.Location = new Point(440, 93);
             label_NewCenterName.Name = "label_NewCenterName";
             label_NewCenterName.Size = new Size(147, 15);
             label_NewCenterName.TabIndex = 5;
@@ -75,7 +75,7 @@
             // label_NewCityName
             // 
             label_NewCityName.AutoSize = true;
-            label_NewCityName.Location = new Point(511, 179);
+            label_NewCityName.Location = new Point(440, 122);
             label_NewCityName.Name = "label_NewCityName";
             label_NewCityName.Size = new Size(156, 15);
             label_NewCityName.TabIndex = 9;
@@ -83,7 +83,7 @@
             // 
             // textBox_NewCityName
             // 
-            textBox_NewCityName.Location = new Point(405, 176);
+            textBox_NewCityName.Location = new Point(334, 119);
             textBox_NewCityName.Name = "textBox_NewCityName";
             textBox_NewCityName.Size = new Size(100, 23);
             textBox_NewCityName.TabIndex = 6;
@@ -91,7 +91,7 @@
             // 
             // button_SaveUpdate
             // 
-            button_SaveUpdate.Location = new Point(347, 248);
+            button_SaveUpdate.Location = new Point(284, 239);
             button_SaveUpdate.Name = "button_SaveUpdate";
             button_SaveUpdate.Size = new Size(75, 23);
             button_SaveUpdate.TabIndex = 10;
@@ -103,7 +103,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(684, 361);
             Controls.Add(button_SaveUpdate);
             Controls.Add(label_NewCityName);
             Controls.Add(textBox_NewCityName);
@@ -113,6 +113,7 @@
             Controls.Add(textBox_NewCenterName);
             Name = "frmUpdateWorkCenter";
             Text = "frmUpdateWorkCenter";
+            Load += frmUpdateWorkCenter_Load;
             ResumeLayout(false);
             PerformLayout();
         }

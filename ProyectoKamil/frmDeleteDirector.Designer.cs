@@ -36,7 +36,7 @@
             // label_RFC
             // 
             label_RFC.AutoSize = true;
-            label_RFC.Location = new Point(280, 172);
+            label_RFC.Location = new Point(213, 135);
             label_RFC.Name = "label_RFC";
             label_RFC.Size = new Size(28, 15);
             label_RFC.TabIndex = 23;
@@ -45,7 +45,7 @@
             // 
             // textBox_RFC
             // 
-            textBox_RFC.Location = new Point(357, 169);
+            textBox_RFC.Location = new Point(290, 132);
             textBox_RFC.Name = "textBox_RFC";
             textBox_RFC.Size = new Size(100, 23);
             textBox_RFC.TabIndex = 25;
@@ -53,7 +53,7 @@
             // 
             // button_Delete
             // 
-            button_Delete.Location = new Point(357, 258);
+            button_Delete.Location = new Point(290, 221);
             button_Delete.Name = "button_Delete";
             button_Delete.Size = new Size(75, 23);
             button_Delete.TabIndex = 24;
@@ -65,12 +65,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(684, 361);
             Controls.Add(button_Delete);
             Controls.Add(label_RFC);
             Controls.Add(textBox_RFC);
             Name = "frmDeleteDirector";
             Text = "frmDeleteDirector";
+            Load += frmDeleteDirector_Load;
             ResumeLayout(false);
             PerformLayout();
         }

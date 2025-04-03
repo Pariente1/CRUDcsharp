@@ -20,9 +20,14 @@ namespace ProyectoKamil
         public frmUpdatingDirector(EmployeeDto empleado)
         {
             InitializeComponent();
+            this.Size = new Size(700, 400);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             _empleado = empleado;
             _empleadoId = empleado.Id;
-            ComboBoxLoader.CargarCentroTrabajo(comboBoxWorkCenter);            
+            ComboBoxLoader.CargarCentroTrabajo(comboBoxWorkCenter);
             CargarDatos();
         }
         private void CargarDatos()
@@ -31,7 +36,7 @@ namespace ProyectoKamil
             textBoxFatherLastname.Text = _empleado.ApellidoPaterno ?? ""; ;
             textBoxMotherLastname.Text = _empleado.ApellidoMaterno ?? ""; ;
             dateTimePicker.Value = _empleado.FechaNacimiento;
-            comboBoxWorkCenter.SelectedValue = _empleado.CentroTrabajo;            
+            comboBoxWorkCenter.SelectedValue = _empleado.CentroTrabajo;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -62,6 +67,11 @@ namespace ProyectoKamil
                 else
                     MessageBox.Show("No se pudo actualizar el empleado.");
             }
+        }
+
+        private void frmUpdatingDirector_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -49,7 +49,7 @@
             // 
             comboBoxJobPosition.FormattingEnabled = true;
             comboBoxJobPosition.Items.AddRange(new object[] { "Vendedor ", "Cajero" });
-            comboBoxJobPosition.Location = new Point(348, 237);
+            comboBoxJobPosition.Location = new Point(308, 185);
             comboBoxJobPosition.Margin = new Padding(2, 1, 2, 1);
             comboBoxJobPosition.Name = "comboBoxJobPosition";
             comboBoxJobPosition.Size = new Size(132, 23);
@@ -60,7 +60,7 @@
             // 
             comboBoxWorkCenter.FormattingEnabled = true;
             comboBoxWorkCenter.Items.AddRange(new object[] { "Centro Culiacan", "Centro Guasave", "Centro Navolato" });
-            comboBoxWorkCenter.Location = new Point(348, 209);
+            comboBoxWorkCenter.Location = new Point(308, 157);
             comboBoxWorkCenter.Margin = new Padding(2, 1, 2, 1);
             comboBoxWorkCenter.Name = "comboBoxWorkCenter";
             comboBoxWorkCenter.Size = new Size(132, 23);
@@ -70,7 +70,7 @@
             // label_Birthdate
             // 
             label_Birthdate.AutoSize = true;
-            label_Birthdate.Location = new Point(191, 184);
+            label_Birthdate.Location = new Point(151, 132);
             label_Birthdate.Margin = new Padding(2, 0, 2, 0);
             label_Birthdate.Name = "label_Birthdate";
             label_Birthdate.RightToLeft = RightToLeft.Yes;
@@ -81,7 +81,7 @@
             // label_Name
             // 
             label_Name.AutoSize = true;
-            label_Name.Location = new Point(191, 103);
+            label_Name.Location = new Point(151, 51);
             label_Name.Margin = new Padding(2, 0, 2, 0);
             label_Name.Name = "label_Name";
             label_Name.RightToLeft = RightToLeft.Yes;
@@ -92,7 +92,7 @@
             // label_MotherLastname
             // 
             label_MotherLastname.AutoSize = true;
-            label_MotherLastname.Location = new Point(191, 155);
+            label_MotherLastname.Location = new Point(151, 103);
             label_MotherLastname.Margin = new Padding(2, 0, 2, 0);
             label_MotherLastname.Name = "label_MotherLastname";
             label_MotherLastname.RightToLeft = RightToLeft.Yes;
@@ -103,7 +103,7 @@
             // label_FatherLastname
             // 
             label_FatherLastname.AutoSize = true;
-            label_FatherLastname.Location = new Point(191, 130);
+            label_FatherLastname.Location = new Point(151, 78);
             label_FatherLastname.Margin = new Padding(2, 0, 2, 0);
             label_FatherLastname.Name = "label_FatherLastname";
             label_FatherLastname.RightToLeft = RightToLeft.Yes;
@@ -114,7 +114,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(191, 238);
+            label1.Location = new Point(151, 186);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(101, 15);
@@ -124,7 +124,7 @@
             // label_WorkCenter
             // 
             label_WorkCenter.AutoSize = true;
-            label_WorkCenter.Location = new Point(191, 210);
+            label_WorkCenter.Location = new Point(151, 158);
             label_WorkCenter.Margin = new Padding(2, 0, 2, 0);
             label_WorkCenter.Name = "label_WorkCenter";
             label_WorkCenter.Size = new Size(101, 15);
@@ -133,7 +133,7 @@
             // 
             // dateTimePicker
             // 
-            dateTimePicker.Location = new Point(348, 182);
+            dateTimePicker.Location = new Point(308, 130);
             dateTimePicker.Margin = new Padding(2, 1, 2, 1);
             dateTimePicker.Name = "dateTimePicker";
             dateTimePicker.Size = new Size(261, 23);
@@ -143,7 +143,7 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(298, 299);
+            btnGuardar.Location = new Point(259, 287);
             btnGuardar.Margin = new Padding(2, 1, 2, 1);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(182, 22);
@@ -154,7 +154,7 @@
             // 
             // textBoxMotherLastname
             // 
-            textBoxMotherLastname.Location = new Point(348, 154);
+            textBoxMotherLastname.Location = new Point(308, 102);
             textBoxMotherLastname.Margin = new Padding(2, 1, 2, 1);
             textBoxMotherLastname.Name = "textBoxMotherLastname";
             textBoxMotherLastname.Size = new Size(110, 23);
@@ -164,7 +164,7 @@
             // 
             // textBoxFatherLastname
             // 
-            textBoxFatherLastname.Location = new Point(348, 129);
+            textBoxFatherLastname.Location = new Point(308, 77);
             textBoxFatherLastname.Margin = new Padding(2, 1, 2, 1);
             textBoxFatherLastname.Name = "textBoxFatherLastname";
             textBoxFatherLastname.Size = new Size(110, 23);
@@ -175,7 +175,7 @@
             // 
             // textBoxName
             // 
-            textBoxName.Location = new Point(348, 101);
+            textBoxName.Location = new Point(308, 49);
             textBoxName.Margin = new Padding(2, 1, 2, 1);
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(110, 23);
@@ -186,7 +186,7 @@
             // 
             // textBoxSelectRFC
             // 
-            textBoxSelectRFC.Location = new Point(348, 262);
+            textBoxSelectRFC.Location = new Point(308, 210);
             textBoxSelectRFC.Margin = new Padding(2, 1, 2, 1);
             textBoxSelectRFC.Name = "textBoxSelectRFC";
             textBoxSelectRFC.Size = new Size(110, 23);
@@ -196,7 +196,7 @@
             // label_RFC
             // 
             label_RFC.AutoSize = true;
-            label_RFC.Location = new Point(191, 265);
+            label_RFC.Location = new Point(151, 213);
             label_RFC.Margin = new Padding(2, 0, 2, 0);
             label_RFC.Name = "label_RFC";
             label_RFC.Size = new Size(28, 15);
@@ -207,7 +207,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(684, 361);
             Controls.Add(textBoxSelectRFC);
             Controls.Add(label_RFC);
             Controls.Add(comboBoxJobPosition);

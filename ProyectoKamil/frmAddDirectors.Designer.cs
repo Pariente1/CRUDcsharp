@@ -47,7 +47,7 @@
             // label_Birthdate
             // 
             label_Birthdate.AutoSize = true;
-            label_Birthdate.Location = new Point(134, 145);
+            label_Birthdate.Location = new Point(168, 169);
             label_Birthdate.Margin = new Padding(2, 0, 2, 0);
             label_Birthdate.Name = "label_Birthdate";
             label_Birthdate.RightToLeft = RightToLeft.Yes;
@@ -58,7 +58,7 @@
             // label_Name
             // 
             label_Name.AutoSize = true;
-            label_Name.Location = new Point(134, 63);
+            label_Name.Location = new Point(168, 87);
             label_Name.Margin = new Padding(2, 0, 2, 0);
             label_Name.Name = "label_Name";
             label_Name.RightToLeft = RightToLeft.Yes;
@@ -69,7 +69,7 @@
             // label_MotherLastname
             // 
             label_MotherLastname.AutoSize = true;
-            label_MotherLastname.Location = new Point(134, 116);
+            label_MotherLastname.Location = new Point(168, 140);
             label_MotherLastname.Margin = new Padding(2, 0, 2, 0);
             label_MotherLastname.Name = "label_MotherLastname";
             label_MotherLastname.RightToLeft = RightToLeft.Yes;
@@ -80,7 +80,7 @@
             // label_FatherLastname
             // 
             label_FatherLastname.AutoSize = true;
-            label_FatherLastname.Location = new Point(134, 90);
+            label_FatherLastname.Location = new Point(168, 114);
             label_FatherLastname.Margin = new Padding(2, 0, 2, 0);
             label_FatherLastname.Name = "label_FatherLastname";
             label_FatherLastname.RightToLeft = RightToLeft.Yes;
@@ -91,7 +91,7 @@
             // label_WorkCenter
             // 
             label_WorkCenter.AutoSize = true;
-            label_WorkCenter.Location = new Point(134, 171);
+            label_WorkCenter.Location = new Point(168, 195);
             label_WorkCenter.Margin = new Padding(2, 0, 2, 0);
             label_WorkCenter.Name = "label_WorkCenter";
             label_WorkCenter.Size = new Size(101, 15);
@@ -100,7 +100,7 @@
             // 
             // dateTimePicker
             // 
-            dateTimePicker.Location = new Point(291, 139);
+            dateTimePicker.Location = new Point(325, 163);
             dateTimePicker.Margin = new Padding(2, 1, 2, 1);
             dateTimePicker.Name = "dateTimePicker";
             dateTimePicker.Size = new Size(261, 23);
@@ -109,7 +109,7 @@
             // 
             // textBoxMotherLastname
             // 
-            textBoxMotherLastname.Location = new Point(291, 113);
+            textBoxMotherLastname.Location = new Point(325, 137);
             textBoxMotherLastname.Margin = new Padding(2, 1, 2, 1);
             textBoxMotherLastname.Name = "textBoxMotherLastname";
             textBoxMotherLastname.Size = new Size(110, 23);
@@ -118,7 +118,7 @@
             // 
             // textBoxFatherLastname
             // 
-            textBoxFatherLastname.Location = new Point(291, 87);
+            textBoxFatherLastname.Location = new Point(325, 111);
             textBoxFatherLastname.Margin = new Padding(2, 1, 2, 1);
             textBoxFatherLastname.Name = "textBoxFatherLastname";
             textBoxFatherLastname.Size = new Size(110, 23);
@@ -129,7 +129,7 @@
             // 
             // textBoxName
             // 
-            textBoxName.Location = new Point(291, 60);
+            textBoxName.Location = new Point(325, 84);
             textBoxName.Margin = new Padding(2, 1, 2, 1);
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(110, 23);
@@ -139,7 +139,7 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(251, 257);
+            btnGuardar.Location = new Point(285, 281);
             btnGuardar.Margin = new Padding(2, 1, 2, 1);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(81, 22);
@@ -152,7 +152,7 @@
             // 
             comboBoxWorkCenter.FormattingEnabled = true;
             comboBoxWorkCenter.Items.AddRange(new object[] { "Centro Culiacan", "Centro Guasave", "Centro Navolato" });
-            comboBoxWorkCenter.Location = new Point(291, 168);
+            comboBoxWorkCenter.Location = new Point(325, 192);
             comboBoxWorkCenter.Margin = new Padding(2, 1, 2, 1);
             comboBoxWorkCenter.Name = "comboBoxWorkCenter";
             comboBoxWorkCenter.Size = new Size(132, 23);
@@ -162,7 +162,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(134, 195);
+            label1.Location = new Point(168, 219);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(147, 15);
@@ -172,7 +172,7 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(291, 193);
+            radioButton1.Location = new Point(325, 217);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(34, 19);
             radioButton1.TabIndex = 34;
@@ -184,7 +184,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(291, 218);
+            radioButton2.Location = new Point(325, 242);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(41, 19);
             radioButton2.TabIndex = 35;
@@ -196,7 +196,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(632, 342);
+            ClientSize = new Size(684, 361);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Controls.Add(label1);

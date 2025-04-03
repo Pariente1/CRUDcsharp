@@ -16,6 +16,7 @@ namespace ProyectoKamil
         public frmViewDirectors()
         {
             InitializeComponent();
+            this.Size = new Size(700, 400);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
