@@ -167,6 +167,7 @@
             radioButton2.TabStop = true;
             radioButton2.Text = "No";
             radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // radioButton1
             // 
@@ -178,6 +179,7 @@
             radioButton1.TabStop = true;
             radioButton1.Text = "Sí";
             radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // label2
             // 
@@ -188,6 +190,7 @@
             label2.Size = new Size(147, 15);
             label2.TabIndex = 65;
             label2.Text = "Prestación de combustible";
+            label2.Click += label2_Click;
             // 
             // frmUpdatingDirector
             // 

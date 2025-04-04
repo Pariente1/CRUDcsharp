@@ -56,8 +56,11 @@ namespace ProyectoKamil
                     CentroTrabajo = comboBoxWorkCenter.SelectedValue != null && Convert.ToInt32(comboBoxWorkCenter.SelectedValue) != 0
                          ? Convert.ToInt32(comboBoxWorkCenter.SelectedValue)
                          : 0,
-                    Directivo = false
-                };
+                    IdPuesto = 3,
+                    Directivo = false,
+                    PrestacionGasolina = radioButton1.Checked ? true : false,
+
+                }; 
 
 
                 bool actualizado = EmployeeRepository.UpdateEmpleado(_empleado, nuevoEmpleado);
@@ -70,6 +73,21 @@ namespace ProyectoKamil
         }
 
         private void frmUpdatingDirector_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
         }

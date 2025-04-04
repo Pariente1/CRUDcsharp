@@ -17,6 +17,7 @@ namespace ProyectoKamil.Dto
         public int? CentroTrabajo { get; set; }
         public int? IdPuesto { get; set; }
         public bool? Directivo { get; set; }
+        public bool? PrestacionGasolina { get; set; }
 
     }
         
