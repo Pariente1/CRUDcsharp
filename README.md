@@ -1,2 +1,2 @@
-# IngSoftwareIII
-CRUD C#
+# Gestión Integral de Personal – Empleados y Directivos
+MVP desarrollado para gestionar de forma centralizada los datos de empleados y sus roles directivos. El proyecto permite crear, actualizar y eliminar registros en la base de datos, asegurando la consistencia a través de transacciones y la correcta aplicación de restricciones de integridad referencial. Destaca la generación automática del RFC, validaciones personalizadas y la actualización coordinada de la información en tablas relacionadas, optimizando la administración del personal.
