@@ -56,8 +56,7 @@ namespace ProyectoKamil
                     CentroTrabajo = comboBoxWorkCenter.SelectedValue != null && Convert.ToInt32(comboBoxWorkCenter.SelectedValue) != 0
                          ? Convert.ToInt32(comboBoxWorkCenter.SelectedValue)
                          : 0,
-                    IdPuesto = 3,
-                    Directivo = false,
+                    IdPuesto = 3,                    
                     PrestacionGasolina = radioButton1.Checked ? true : false,
 
                 }; 
